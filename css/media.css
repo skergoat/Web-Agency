@@ -1,0 +1,396 @@
+
+@media screen and (max-width: 1230px)	
+{	
+	#container_slogan{				/* ajustement de la taille et la position du slogan */
+
+		font-size:25px;
+		padding-left:0px;
+	}
+
+	#container_slogan_slogan {
+
+		padding-left:0px;
+	}
+}
+
+/***************************************************** 1106 px *******************************************************/
+
+
+@media screen and (max-width: 1106px)
+{
+
+	#container_formulaire_1{		/* positionnement du formulaire sous la carte */
+
+		position:relative;
+		height:100%;
+		background-color:#d0d0d0;
+		border-top: 1px solid grey;
+	}
+	
+	#formulaire {						/* centrement du formulaire */
+
+		margin-left:0%;
+		width:80%;
+		display:block;
+		margin:auto;
+		margin-top:0px;
+		padding-bottom:50px;
+		border-radius:0px;
+		border:0px;
+		border-bottom:0px solid grey;
+	}
+
+	h4, strong, #address{				/* centremnent du titre du formulaire */
+
+		text-align:center;
+	}
+}
+
+/***************************************************** 1123 px *******************************************************/
+
+@media screen and (max-width: 1123px)
+{
+	#container_container_projets{		/* ajustement de la div des projets */
+
+		margin-right:150px;
+		margin-left:150px;
+	}
+
+	.container_projets {				/* ajustement de la div des projets du haut et du bas */
+
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	}
+}
+
+/***************************************************** 950 px *******************************************************/
+
+
+@media screen and (max-width: 950px)
+{
+
+	p, h2, h3 {					/* titres et p */
+
+		text-align:center;
+	}
+
+	nav ul {				/* disparition des items de la nav > 950 px */
+		
+		display:none;
+	}
+
+	#icon1 {				/* apparition du hamburger */
+
+		display: block;
+  	}
+
+  	#container_nav_responsive{	/* conteneur de la nav depliante */
+
+		display:block;
+		overflow:hidden;
+		height:0px;
+		width:100%;
+		z-index:501;
+		position:fixed;
+		top:0px;
+	}
+
+	#nav_responsive{			/* style de la nav depliante */
+
+		display:block;
+		width:100%;
+		position:absolute;
+		top:-200px;
+		background-color:white;
+		z-index:500;
+		overflow:hidden;
+		border-top:2.5px solid grey;
+		box-shadow: grey 0px 0px 8px 2px;
+	}
+
+	#nav_responsive li {		/* items de la nav depliante */
+
+		border-bottom:1px solid #C0C0C0;
+		width:100%;
+	}
+
+	.montest{
+
+		display:block;
+	}
+
+	.montest {	
+
+		margin:auto;
+		width:100%;
+		height:100%;
+		padding-top:15px;
+		padding-bottom:15px;
+		padding-left:15px;
+		color:#6C6F74;
+		font-family: 'robotoregular', sans-serif;
+		font-size:14px;
+	}
+
+	#nav_responsive li:hover{	/* survol de la nav depliante */
+
+		background-color:#E0E0E0;
+	}
+
+	#nav_responsive a {			/* style des items de la nav depliante */
+
+		text-decoration: none;
+	}
+
+	#nav_responsive a li {	/* position des items de la nav depliante */
+
+		padding-left:20px;
+	}
+
+	#container_slogan p{		/* disparition du p du header */
+
+		display:none;
+	}
+
+	#container_slogan h3{		/* ajustement du h3 du header */
+
+		text-align:left;
+		font-size:25px;
+		margin-bottom:20px;
+	}
+
+	.flex{
+
+		flex-direction:column;
+	}
+
+	.style_text{					/* style du conteneur des textes des "services" */
+
+		margin-left:0px;
+	}
+
+	#ordinateur, .icones{		/* position des images de la div "services" */
+
+		display:block;
+		margin:auto;
+		
+	}
+
+	.flex_container{			/* conteneur des icones des "services" */
+
+		display:flex;
+		align-items:center;
+		justify-content: center;
+	}
+
+	.image_div{					/* repositionnement dfes icones "services" */
+
+		margin-right:0px;
+	}
+								/* les "services" */
+
+	.trait_gris{				/* trait gris et cercle bleu */
+
+	 	margin:auto;
+	 	position:relative;
+	 	top:15px;
+	}
+
+	.cercle_bleu_tierce{
+
+	 	top:-20px;
+	 	right:-43px;
+	}
+
+	.flex div p {				/* p des "services" */
+	
+		text-align:center;
+		margin-right:100px;
+		margin-left:100px;
+	}
+
+	.style_text{					/* style du conteneur des textes des "services" */
+
+		margin-left:20px;
+		margin-right:20px;
+	}
+}
+
+/***************************************************** 863 px *******************************************************/
+
+@media screen and (max-width: 863px)
+{
+	#container_container_projets{		/* ajustement de la div des projets */
+
+		margin-right:50px;
+		margin-left:50px;
+	}
+
+	.container_projets {				/* ajustement de la div des projets du haut et du bas */
+
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	}
+}
+
+/***************************************************** 850 px *******************************************************/
+
+@media screen and (max-width:850px)
+{
+	.container_projets{			/* ajustement du positionnement des "projets" */
+
+		display:flex;
+		flex-wrap:wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.style_text{					/* style du conteneur des textes des "services" */
+
+		margin-left:20px;
+		margin-right:20px;
+	}
+}
+
+/***************************************************** 737 px *******************************************************/
+
+
+@media screen and (max-width: 737px)
+{
+
+	#container_slogan {			
+
+		display:none;
+	}	
+}
+
+/***************************************************** 600 px *******************************************************/
+
+
+@media screen and (max-width: 600px)
+{
+	.flex div p {				/* p des "services" */
+	
+		text-align:center;
+		margin-right:0px;
+		margin-left:0px;
+	}
+
+	.bouton {			/* disparition des boutons du slider */
+
+		display:none;
+	}
+}
+
+/***************************************************** 520 px *******************************************************/
+
+@media screen and (max-width: 520px)
+{
+	#ordinateur{		/* image d'ordinateur de la section "services" */
+
+		display: block;
+		position:relative;
+		width:100%;
+	}
+
+	.style_text{					/* style du conteneur des textes des "services" */
+
+		margin-left:20px;
+	}
+
+	#container_bouton_2, #container_bouton_1{
+
+		display:none;
+	} 
+
+}
+
+/***************************************************** 500 px *******************************************************/
+
+
+@media screen and (max-width: 500px)
+{
+	#logo{				/* position du logo */
+
+		margin-top:10px;
+		margin-bottom:10px;
+		margin-left:10px;
+	}
+
+	.titre_section p {	/* ajustement du p des sections */
+
+		width:90%;
+	}
+
+	#liste_projets{
+
+		width:380px;
+	}
+
+	#div_fleche_bleue{	
+
+		width:380px;
+	}
+
+	#formulaire {						/* centrement du formulaire */
+
+		width:100%;
+	}
+}
+
+/***************************************************** 390 px *******************************************************/
+
+
+@media screen and (max-width: 390px)
+{
+
+	/* taille titres sections */
+
+	h2{
+
+		font-size:30px;
+	}
+
+	
+	#en_tete_2 {					
+		
+		max-width:100%;
+		height:auto;
+	}
+
+	#en_tete_1 {
+
+		max-height:100%;
+		height:auto;
+	}
+
+	#icon1{					/* position du "hamburger" */
+
+		margin-right:10px;
+	}
+
+	#liste_projets{			/* ajustement taille liste "projets" */
+
+		width:320px;
+	}
+
+	#liste_projets li{		/* ajustement police des items */
+
+		font-size:15px;
+	}
+
+	#div_fleche_bleue{		/* ajustement taille "fleches bleues"  */
+
+		width:320px;
+	}
+
+	.projets{				/* centrage des projets individuels */
+
+		display:block;
+		margin:auto;
+		margin-bottom:20px;
+	}
+
+}

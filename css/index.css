@@ -1,0 +1,850 @@
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/Roboto_Medium/Roboto-Medium-webfont.eot');
+    src: url('../fonts/Roboto_Medium/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto_Medium/Roboto-Medium-webfont.woff2') format('woff2'),
+         url('../fonts/Roboto_Medium/Roboto-Medium-webfont.woff') format('woff'),
+         url('../fonts/Roboto_Medium/Roboto-Medium-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto_Medium/Roboto-Medium-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto_Regular/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto_Regular/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto_Regular/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Roboto_Regular/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto_Regular/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto_Regular/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1, h2, h3, strong, .span_titre, .span_paragraphe { 	/* fonts de la page */
+
+	font-family:'robotomedium', sans-serif;
+}
+
+p, nav ul li, #liste_projets li, #nav_responsive a li {	
+
+	font-family:'robotoregular', sans-serif;
+	color:#6C6F74;
+	font-size:15px;
+}
+
+
+h2 {													/* titres */	
+
+	font-size:45px;
+	font-weight:bold;
+	margin-bottom:35px;
+	text-transform:uppercase;
+}
+
+h3{
+
+	font-weight: 900;
+}
+
+#container_slogan_slogan h3 {
+
+	text-transform:uppercase;
+}
+
+h4{
+
+	font-size:30px;
+}								
+
+/***************************************************** NAVBAR *******************************************************/
+
+nav{							/* style de la navbar */
+	padding-right:0px;
+	padding-left:0px;
+	position:fixed;
+	background-color:white;
+	width:100%;
+	z-index:200000;
+	top:0px;
+}
+
+#logo{							/* logo WebAgency */
+
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:50px;
+}
+
+
+ul{								/* position de la liste dans la nav */
+	margin:0px;
+	padding:0px;
+	margin-right:50px;
+ }
+
+nav, nav ul {					/* alignement horizontal des items dans la liste et de la liste dans la navbar */
+
+	display:flex;
+	justify-content:space-between;
+}
+
+nav ul li {						/* position des items */
+
+	width:100px;
+	margin:auto;
+	text-align:center;
+	width:100px;
+}
+
+nav ul ul {						/* conteneur cliquable des items de la liste */
+
+	margin-right:50px;
+	display:flex;
+	width:100px;
+	height:100%;
+}
+
+nav ul a {						/* lien qui rend "nav ul ul" cliquable */
+
+	display:block;
+	width:100px;
+	margin-right:50px;
+	cursor: pointer;
+}
+
+nav ul a:hover{					/* survol des a et border-top bleu */
+
+	border-top:4px solid #4d90af;
+	padding-bottom:4px;
+}
+
+nav ul a {						/* style des items */
+
+	text-decoration:none;
+	color:#d3531a;
+	font-size:20px;
+}
+
+#liste1 li {					/* position trait bleu navbar */
+
+	width:100%;
+}
+
+#liste1 li a{
+
+	height:74px;
+}
+
+#liste1 li a span {			/*********** sans le span ? */
+
+	position:relative;		/*********** texte sur telephone vignettes */
+	top:23px;				/*********** texte sur telephone vignettes requette ajax */
+	color:#6C6F74;
+	font-size:15px;
+}
+
+
+/******************************* Icone "hamburger" (< 950px) ******************/
+
+#icon1 {						/* div de l'icone hamburger */
+  width: 40px;
+  height: 45px;
+  position: relative;
+  margin-right:30px;
+  margin-top:20px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display:none;
+}
+
+#icon1 span {					/* les differentes "couches" du hamburger */
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#icon1 span:nth-child(1) {		/* position des etages du hamburger */
+  top: 5px;
+}
+
+#icon1 span:nth-child(2) {
+  top: 15px;
+}
+
+#icon1 span:nth-child(3) {
+  top: 25px;
+}
+
+#icon1.open span:nth-child(1) {	/* animation du hamburger au moment du click */
+								/* les premieres et dernieres "couches" effectuent une rotartion */
+								/* la deuxieme disparait */
+  top: 18px;
+  transform: rotate(135deg);
+}
+
+#icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#icon1.open span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-135deg);
+}
+
+/**************************************** navbar (fin) *******************/
+
+#nav_bis{						/* div qui compense la hauteur de la navbar au moment ou elle devient "fixed" */ 
+								/* et evite que la page ne remonte brusquement de la hauteur de la navbar */
+	height:78px;
+}
+
+#nav_responsive, #container_nav_responsive { /* etat de la navbar responsive > 950px */
+
+	display:none;
+}
+
+.navbar_animation				/* animation qui fait descendre la navbar apres un scroll de 300px */
+
+{
+    animation: headerFloating 0.9s 1;
+}
+
+@keyframes headerFloating 
+{
+	0% {
+		transform: translateY(-86px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
+/***************************************************** EN-TETE *******************************************************/
+
+#container_slogan_slogan h3, #container_slogan_slogan p {
+
+	color:white;				/* style du texte */
+}
+
+#container_container_slogan{	/* div qui contient la div contenant le slogan et les boutons et place en position absolute */
+
+	display:flex;
+	justify-content:space-between;
+	position:absolute;
+	z-index: 100;
+	width:100%;
+	padding-top:10%;
+}
+
+#container_container_slogan_1{	/* div contenant le slogan et les boutons et qui permet leur alignement horizontal */	
+
+	width:100%;
+	display:flex;
+}
+
+#container_container_slogan_2{	/* div contenant le bouton gauche et le slogan */	
+
+	display:flex;
+}
+
+#container_bouton_1{			/* div contenant le bouton de gauche */	
+
+	margin:auto;
+	margin-right:0px;
+}
+
+#bouton1{						/* fleche et bouton */
+
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+	border-top-right-radius:50px;
+	border-bottom-right-radius:50px;
+	text-align:center;
+}
+
+#container_bouton_2{			/* div contenant le bouton de droite */	
+
+	margin:auto;
+	margin-right:0px;
+}
+
+.bouton{						/* creation des boutons du slider */
+
+	width:50px;
+	border-top-left-radius:70px;
+	border-bottom-left-radius:70px;
+	text-align:center;
+	cursor:pointer;
+	padding-top:43px;
+	padding-bottom:43px;
+	font-size:20px;
+}
+
+.bouton:active {					/* changement du bouton au moment du click  */
+	background-color:rgba(0, 0, 0, 0.5);	
+}
+		
+#container_slogan{				/* conteneur ou l'on va positionner le slogan */
+
+	text-align:left;
+	font-size:200%;
+	position:relative;
+	z-index:2;
+}
+
+#container_slogan_slogan{		/* ajustement du slogan dans son conteneur */		
+
+	width:540px;
+	margin-right:100px;
+	padding-left:100px;
+
+}
+
+#container_slogan_slogan h3{	/* position du slogan-titre */
+
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+span{							/* couleur titre span  */
+
+	color:#70ABCF;
+}
+
+#container_slogan_slogan p{		/* conteneur du slogan-p */
+
+	font-size:20px;
+	margin-top:10px;
+	font-size:15px;
+}
+
+#plus_dinfo{					/* bouton d'info */ 
+
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:10px;
+	padding-left:10px;
+	cursor:pointer;
+	text-decoration: none;
+	background-color:#70ABCF;
+	border-bottom:3px solid #488CB4;
+	font-size:17px;
+	border-radius:7px;
+	color:white;
+	font-family:'robotoregular', sans-serif;
+}
+
+#en_tete_2 {					/* superposition des images du header pour creer le slider */
+
+	width:100%;
+	position:absolute;
+}
+
+#en_tete_1 {					
+
+	width:100%;
+	position:relative;
+	top:0px;
+}
+
+/* conteneurs responsive des images */
+
+#picture1 {
+
+	position:relative;
+	top:0px;
+	z-index:20;
+}
+
+#picture2 {
+
+	position:absolute;
+	top:78px;
+	z-index:10;
+}
+
+
+/***************************************************** SECTION 1 - "SERVICES" *******************************************************/
+
+.titre_section{					/* positionnement du h2 */
+
+	text-align:center;
+	margin-bottom:60px;
+}
+
+.trait_noir { 					/* trait noir entre le titre et le sous-titre des sections */
+
+	border-top:1px solid #EBEBEB;
+	margin:auto;
+	width:170px;
+	position:relative;
+
+}
+
+ .cercle_bleu {					/* cercle bleu et blanc sur le trait noir */
+
+ 	background:#70ABCF;
+ 	border-radius:50%;
+ 	width:20px;
+ 	height:20px;
+ 	border:5px solid white;
+ 	position:relative;
+ 	margin:auto;
+ 	top:-15px;
+ }
+
+.titre_section p {				/* positionnement du sous-titre sous le h2 */
+
+	width:50%;
+	display:block;
+	margin:auto;
+	line-height:30px;
+}
+
+.flex{							/* positionnement des "services" (UX, UI, etc.) */
+
+	display:flex;
+}
+
+.style_text{					/* style du conteneur des textes des "services" */
+
+	margin-left:70px;
+	margin-right:20px;
+}
+
+.flex p {						/* style du p des "services" */
+
+	line-height:30px;
+	margin-right:10%;
+}
+
+.trait_gris{					/* cercle gris autour des icones des "services" */
+
+ 	border-radius:50%;
+ 	width:50px;
+ 	height:50px;
+ 	border:1px solid #DADADA;
+ 	margin-top:30px;
+}
+
+
+.mafont {							/* icones font awesome */
+
+	color:#70ABCF;
+	display:block;
+	position:relative;
+	top:16px;
+	left:16px;
+	font-size:18px;
+}
+
+
+.cercle_bleu_tierce{			/* cercle bleue sur le trait gris autour des icones des "services" */
+
+	border-radius:50%;
+ 	width:12px;
+ 	height:12px;
+ 	background-color:#70ABCF; 
+ 	border:2px solid white;
+ 	position:relative;
+ 	top:-35px;
+ 	right:-43px;
+}
+
+.icones {						/* style des icones des "services" */
+
+	width:25px;
+	display:block;
+	margin:auto;
+	position:relative;
+	top:12px;
+}
+
+.image_div{						/* position des icones des p de "services" */ 
+
+	margin-right:20px;
+}
+
+ /***************************************************** SECTION 2 - "PROJETS" *******************************************************/
+
+.far {
+
+	color:white;
+	font-size:20px;
+	display:block;
+	position:relative;
+	top:40px;
+	right:46px;
+}
+
+
+.container{						/* section generale */
+
+	width:100%;
+	padding-bottom:100px;
+	padding-top:50px;
+}
+
+#projets{						/* couleur de fond de la section */
+		
+	background-color:#F5F5F5;
+}
+
+#liste_projets{					/* style de l'ensemble de la liste */
+
+	background-color:grey;
+	display:flex;
+	width:443px;
+	margin:auto;
+	border-radius:7px;
+	padding-left:0px;
+}
+
+#liste_projets li{				/* style des items de la liste */
+
+	list-style-type:none;
+	font-size:18px;
+	text-align:center;
+	padding-top:16px;
+	padding-bottom:16px;
+	color:black;
+}
+
+#liste_projets li:nth-child(4){ 	/* bordures de la liste */
+
+	border-right:none;
+}						
+									/* changement de styles des items au survol */
+
+#liste_projets li:nth-child(1):hover, 
+#liste_projets li:nth-child(2):hover,
+#liste_projets li:nth-child(3):hover,
+#liste_projets li:nth-child(4):hover{
+
+	background-color:#70ABCF;
+	border-bottom:3px solid #588AAA;
+	padding-bottom:13px;
+	color:white;
+
+}								/* correction des bordures ds items au moment du survol */
+
+#liste_projets li:nth-child(1):hover{
+
+	border-top-left-radius:7px;
+	border-bottom-left-radius:7px;
+}
+
+#liste_projets li:nth-child(4):hover{
+
+	border-top-right-radius:7px;
+	border-bottom-right-radius:7px;
+}
+
+.bouton_projet{					/* curseur des boutons */
+
+	cursor:pointer;
+}
+
+#div_fleche_bleue{				/* position de la div contenant les fleches bleues */
+
+	height:15px;
+	display:flex;
+	width:443px;
+	margin:auto;
+	padding-left:0px;
+	margin-bottom: 50px;
+}
+
+#div_fleche_bleue, li{			/* div contenant les fleches */
+
+	list-style-type:none;
+	width:443px;
+}
+
+.fleche_bleue{					/* style des fleches bleues */
+
+	height:15px;
+	width:20px;
+	display:block;
+	margin:auto;
+}
+
+#container_general_projet{  	/* conteneur contenant le conteneur des "projets" */
+
+	width:100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	position:relative;
+}
+
+#container_container_projets{	/* conteneur des 2 conteneurs des projets du haut et du bas  */
+
+	margin:0px;
+	position:relative;
+}
+
+.container_projets{				/* 2 conteneurs des 4 projets du haut et du bas */
+
+	display:flex;
+	flex-wrap:wrap;
+	width:100%;
+}
+
+.projets{						/* projets individuels et illustrations */
+
+	width:260px;
+	height:173px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	overflow:hidden;
+
+}
+
+/****************************** div titre animees ******************************/
+
+.image_projet{					/* image de fond des "projets" */
+
+	width:100%;
+}
+
+.div_transparente{				/* div invisible, superposee a l'image et dont le survol declenche l'animation */
+
+	z-index:400;
+	position:relative;
+	top:-180px;
+	background-color:transparent;
+	width:260px;
+	height:173px;
+	cursor:pointer;
+}
+
+.titre_projet{					/* div general animee*/		
+
+	height:100px;
+	width:100%;
+	position:relative;
+	top:-177px;
+}
+		
+.div_image{						/* div contenant l'icone de l'oeil de la div animee */
+
+	display:flex;
+	justify-content:flex-end;
+}
+
+.cercle_bleu_bis {				/* cercle bleu sous l'oeil de la div animee */				
+
+ 	background:#70ABCF;
+ 	border-radius:50%;
+ 	width:40px;
+ 	height:40px;
+ 	border:5px solid white;
+ 	position:relative;
+ 	margin-right:10px;
+ 	top:25px;
+ 	left:20px;
+ }
+
+ .oeilBleu{
+
+ 	position:relative;
+ 	right:26px;
+ }
+
+.icones_test{					/* icones oeil */
+	display:block;
+	position:absolute;
+	top:36px;
+	right:20px;
+	height:30px;
+	width:30px;
+}
+
+.titre_projet_2{				/* style de la div animee */
+
+	width:100%;
+	height:100px;
+	background-color:rgba(0, 0, 0, 0.7);
+	padding-top:10px;
+	padding-left:10px;
+	line-height:25px;
+}
+
+.span_titre{					/* titre de la div animee */
+
+	font-size:25px;
+	color:pink;
+}
+
+.span_paragraphe{				/* p de la div animee */
+
+	font-size:17px;
+	color:white;
+}
+
+/***************************************************** SECTION 3 - CARTE ET FORMULAIRE *******************************************************/
+
+/* filte bleu */
+
+.filtre_bleu {
+
+ 	background:rgba(44, 146, 255, 0.3);
+ 	height:100%;
+ 	width:100%;
+ 	position:absolute;
+ 	top:0px;
+ 	cursor:pointer;
+}
+
+.bleu {
+
+	display:block;
+}
+
+.pasBleu {
+
+	display:none;
+}
+
+#section_carte{					/* position de la section */
+
+	position:relative;
+}
+
+#carte{							/* style de la carte */
+
+	width:100%; 
+	height:700px;
+	z-index:0;
+}
+
+#container_formulaire_1{		/* la div qui contient le formulaire et qui est positionnee par-dessus la carte */
+
+	height:0px;
+	display:block;
+	width:100%;
+	position:absolute;
+	top:0%;
+}
+
+#formulaire{					/* style du formulaire */
+
+	margin-left:62%;
+	width:400px;
+	margin-top:50px;
+	padding-bottom:50px;
+	border:1px solid grey;
+	background-color:rgba(208, 208, 208, 0.9);
+	border-radius:7px;
+	z-index:10;
+}
+
+#address, form input:first-child{
+
+	margin-top:30px;
+	line-height:8px;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+#address p:last-child{
+
+	margin-bottom:0px;
+}
+
+form{							/* style du formulaire. Positionnement des input */
+
+	display:flex;
+	flex-direction:column;
+}
+								/* l'address du formulaire */
+input[type=text],				/* style des input et du textarea */
+input[type=email]{
+
+	height:27px;
+}
+
+input, textarea{				
+
+	border-radius:3px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+
+textarea{
+	border:none;
+	border-left:2px solid #9a9a9a;
+	border-top:2px solid #9a9a9a;
+	border-bottom:2px solid #eeeeee;
+	border-right:2px solid #eeeeee;
+}
+
+/* submit */
+
+input[type=submit]{	
+
+	cursor:pointer;
+	background-color:#70ABCF;
+	border:0px;
+	border-bottom:3px solid #488CB4;
+	width:150px;
+	height:40px;
+	font-size:17px;
+	border-radius:7px;
+	color:white;
+}							
+							/* la div contenant le message envoye par ajax */
+
+#form-messages{
+
+	margin-left:20px;
+	height:8px;
+	font-size:18px;
+}
+
+.error { 					/* style du message affiche */
+
+	color:#d3531a;
+ }
+
+ .success {
+
+ 	color: #4d90af;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

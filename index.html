@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset ="utf-8">
+		<meta name="viewport" content="width=device-width"/><!-- adaptation a la taille du device pour smartphone -->
+		<title>Web Agency</title>
+		<link rel="icon" href="img/icone.png" />
+		<link rel="stylesheet" href="css/normalize.css"><!-- remise a zero des proprietes css du browser -->
+		<link rel="stylesheet" href="css/index.css"/><!-- feuille de style -->
+		<link rel="stylesheet" href="css/media.css"/><!-- les media queries -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"><!-- icones font awesome -->
+	</head>
+	<body ><!-- lancer la fonction qui va faire apparaitre la carte -->
+		<div id="topPage"></div>
+		<nav><!-- la navbar pour ecrans sup a 950 px. En-dessus de 950px la nav disparait et laisse place a un "hamburger". Lorsqu'on clique dessus, une seconde nav depliante apparait -->
+			<div>
+				<a href="#"><img src="img/logo.png" alt="logo WA" id="logo"/></a><!-- logo du site -->
+			</div>
+			<ul id="liste1"><!-- liste cliquable des items avec tiret bleu au :hover -->
+				<li>
+					<a href="#topPage">
+						<span>Accueil</span>
+					</a>
+				</li>
+				<li>
+					<a href="#services">
+						<span >Services</span>
+					</a>
+				</li>
+				<li>
+					<a href="#projets">
+						<span >Projets</span>
+					</a>
+				</li>
+				<li>
+					<a href="#section_carte">
+						<span>Contact</span>
+					</a>
+				</li>
+			</ul>
+			<div id="icon1"><!--le "hamburger" de la navbar responsive (< 950px) -->
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</nav>
+		<div id="nav_bis"></div> <!--div qui compense la hauteur de la navbar au moment ou elle devient "fixed" -->
+		<div id="container_nav_responsive"><!-- la navbar responsive (< 950px) depliable et mobile qui apparait au moment du clock sur le hamburger -->
+			<ul id="nav_responsive"> <!-- display : block <a> -->
+				<li><a href="#nav_bis"><span class="montest">Accueil</span></a></li>
+				<li><a href="#services"><span class="montest">Service</span></a></li>
+				<li><a href="#projets"><span class="montest">Portfolio</span></a></li>
+				<li><a href="#container_formulaire_1" class="click_responsive navbis"><span class="montest">Contact</span></a></li>
+			</ul>
+		</div>
+		<div id="container_container_slogan"><!-- conteneur du slogan qui permet le positionnement absolu sur le header -->
+			<div id="container_container_slogan_1"><!-- conteneur qui permet l'alignement horizontal du slogan et des boutons -->
+				<div id="container_container_slogan_2"><!-- conteneur du bouton gauche et du slogan -->
+					<div id="container_bouton_1"><!-- div contenant le bouton de gauche -->
+						<i id="bouton1" class="bouton fas fa-angle-left"></i>
+					</div>
+					<div id="container_slogan"><!-- div contenant le slogan et le bouton "plus d'info" -->
+						<div id="container_slogan_slogan">
+							<h3><span>WebAgency</span> : l'agence <br> de tous vos projets !</h3>
+							<p>Vous avez un projet ? Nous vous aidons à le réaliser !</p>
+							<a href="#projets" id="plus_dinfo">Plus d'info</a>
+						</div>
+					</div>
+				</div>
+				<div id="container_bouton_2"><!-- div contenant le bouton de droite -->
+					<i class="bouton fas fa-angle-right"></i>
+				</div>
+			</div>
+		</div>
+		<header><!-- le "slider" d'en-tete. Les 2 images somnt superposees et disparaissent puis apparaissent succesivement -->
+
+			<!-- le balises <pictures> permettent d'avoir des images responsives -->
+
+			<picture id="picture1">
+			  <source media="(max-width: 500px)" srcset="img/Bis.png">
+			  <source media="(min-width: 1200px)" src="img/bg1.jpg">
+			  <img src="img/bg1.jpg" alt="En-Tete 1" id="en_tete_1" class="imageR">
+			</picture>
+
+			<picture id="picture2">
+			  <source media="(max-width: 500px)" srcset="img/bg2Bis.png">
+			  <source media="(min-width: 1200px)" src="img/bg2.jpg">
+			  <img src="img/bg2.jpg" alt="En-Tete 1" id="en_tete_1" class="imageR">
+			</picture>
+			<!--<img src="img/bg2.jpg" alt="En-Tete 2" id="en_tete_2" class="imageR">-->	
+					
+		</header>
+		<section class="container" id="services"><!-- la premiere section de la page -->
+			<div class="titre_section">
+				<h2>nos services</h2>
+				<div class="trait_noir"><!-- le cercle et le trait. Le trait est le border-top de la div. Les reste des border est cache. Le cercle est centre puis surevele en position relative -->
+					<div class="cercle_bleu"></div>
+				</div>
+				<p>Création du design ou construction d'un site internet : notre agence vous accompagne pour réaliser vos projets et refléter votre image de marque</p>
+			</div>
+			<div class="flex">
+				<div><!-- l'image d'ordinateur -->
+					<img src="img/ordinateur.png" alt="ordinateur" id="ordinateur"/>
+				</div>
+				<div class="style_text"><!-- les "services" de la WebAgency -->
+					<div class="flex">
+						<div class="flex_container">
+							<div class="image_div">
+								<div class="trait_gris">
+									<i class="fas fa-chart-line mafont"></i>
+								</div>
+								<div class="cercle_bleu_tierce"></div>
+							</div>
+						</div>
+						<div><!-- descriptif des "services" -->
+							<h3>UX Design</h3>
+							<p>Nous organisons votre site pour permettre la meilleure expérience utilisateur et permettre à votre entreprise d'attirer de nouveaux clients</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="flex_container">
+							<div class="image_div">
+								<div class="trait_gris">
+									<i class="fas fa-edit mafont"></i>
+								</div>
+								<div class="cercle_bleu_tierce"></div>
+							</div>
+						</div>
+						<div>
+							<h3>UI Design</h3>
+							<p>Nos designers sont experts dans la création de sites confortables, élegants, intuitifs et surtout fidèles à l'image de marque de votre entreprise</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="flex_container">
+							<div class="image_div">
+								<div class="trait_gris">
+									<i class="fas fa-chart-pie mafont"></i>
+								</div>
+								<div class="cercle_bleu_tierce"></div>
+							</div>
+						</div>
+						<div>
+							<h3>SEO</h3>
+							<p>Specialistes du référencement sur Internet, nous rendons votre entreprise visible et l'aidons à se faire connaitre auprès de nouveaux clients</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container" id="projets"><!-- la deuxieme section de la page -->
+			<div class="titre_section">
+				<h2>nos projets</h2><!-- le cercle et le trait. Le trait est le border-top de la div. Les reste est cache. Le cercle est centre puis surevele en position relative -->
+				<div class="trait_noir">
+					<div class="cercle_bleu"></div>
+				</div>
+				<p class="style_text">Toujours prêts à relever de nouveaux defis, nous sommes recherchés par les meilleurs pour nos solutions innovantes et notre expertise dans le domaine des nouvelles technologies</p>
+			</div>
+			<ul id="liste_projets"><!-- la navbar qui contient les themes des differents "projets" de l'agence. Au hover elle change de couleur et la fleche apparait grace a JS -->
+				<li id="1" class="bouton_projet">Works</li>
+				<li id="2" class="bouton_projet">Creative</li>
+				<li id="3" class="bouton_projet">Corporate</li>
+				<li id="4" class="bouton_projet">Portfolio</li>
+			</ul>
+			<ul id="div_fleche_bleue"><!-- les fleches bleues qui apparaissent au :hover -->
+				<li class="li_fleche"><img src="img/fleche_bleue1.png" alt="fleche bleue" id="fleche_bleue1" class="fleche_bleue"/></li>
+				<li class="li_fleche"><img src="img/fleche_bleue2.png" alt="fleche bleue" id="fleche_bleue2" class="fleche_bleue"/></li>
+				<li class="li_fleche"><img src="img/fleche_bleue3.png" alt="fleche bleue" id="fleche_bleue3" class="fleche_bleue"/></li>
+				<li class="li_fleche"><img src="img/fleche_bleue4.png" alt="fleche bleue" id="fleche_bleue4" class="fleche_bleue"/></li>
+			</ul>
+		<div id="container_general_projet"><!-- le conteneur general des projets -->
+			<!-- les "projets". Positionne sur la page grace a Flexbox. Une div invisible est positionnee au-dessus de chaque illustration. Le :hover sur la div invisible declenche l'apparition du titre et sous-titre du projet accompagnes d'une icone -->
+			<div id="container_container_projets"><!-- le conteneur qui permet de positionner les projets sur la page -->
+				<div class="container_projets"><!-- le conteneur des 4 projets du haut -->
+					<div class="projets"><!-- la div du projet -->
+						<img src="img/01.jpg" alt="image projet 1" class="image_projet"/><!-- l'illustration en fond -->
+						<a href="https://www.finnair.com/" target="_blank"><!-- la div transparente cliquable dont le survole declenche l'animation -->
+							<div class="div_transparente" id="5"></div>
+						</a>
+						<div id="titre_projet_5" class="titre_projet"><!-- la div du titre qui apparait au :hover -->
+							<div class="div_image">
+								<div class="cercle_bleu_bis"></div>
+								<i class="far fa-eye oeilBleu"></i>
+							</div><!-- l'icone -->
+							<div class="titre_projet_2"><!-- le titre et le sous-titre -->
+								<span class="span_titre">Air Lunettes</span><br/>
+								<span class="span_paragraphe">Site Web Commercial</span>
+							</div>
+						</div>		
+					</div>
+					<div class="projets">
+						<img src="img/02.jpg" alt="image projet 2" class="image_projet"/>
+						<a href="https://www.amazon.fr/telecharger-musique-mp3-amazon-music/b?ie=UTF8&node=77196031" target="_blank">
+							<div class="div_transparente" id="6"></div>
+						</a>
+						<div id="titre_projet_6" class="titre_projet">
+							<div class="div_image">
+								<div class="cercle_bleu_bis"></div>
+								<i class="far fa-eye oeilBleu"></i>
+							</div><!-- l'icone -->
+							<div class="titre_projet_2">
+								<span class="span_titre">Rabbit musique</span><br/>
+								<span class="span_paragraphe">Platforme de téléchargement</span>
+							</div>
+						</div>		
+					</div>
+					<div class="projets">
+						<img src="img/03.jpg" alt="image projet 3" class="image_projet"/>
+						<a href="https://www.tendancefashion.fr/" target="_blank">
+							<div class="div_transparente" id="7"></div>
+						</a>
+						<div id="titre_projet_7" class="titre_projet">
+							<div class="div_image">
+								<div class="cercle_bleu_bis"></div>
+								<i class="far fa-eye oeilBleu"></i>
+							</div><!-- l'icone -->
+							<div class="titre_projet_2">
+								<span class="span_titre">Pompadour</span><br/>
+								<span class="span_paragraphe">Vente en Ligne</span>
+							</div>
+						</div>		
+					</div>
+					<div class="projets">
+						<img src="img/04.jpg" alt="image projet 4" class="image_projet"/>
+						<a href="http://manuskri.tn/" target="_blank">
+							<div class="div_transparente" id="8"></div>
+						</a>
+						<div id="titre_projet_8" class="titre_projet">
+							<div class="div_image">
+								<div class="cercle_bleu_bis"></div>
+								<i class="far fa-eye oeilBleu"></i>
+							</div><!-- l'icone -->
+							<div class="titre_projet_2">
+								<span class="span_titre">Apple Books</span><br/>
+								<span class="span_paragraphe">Vente en ligne</span>
+							</div>
+						</div>		
+					</div>
+				</div>
+				<div class="container_projets"><!-- le conteneur des 4 projets du bas -->
+					<div class="projets">
+						<img src="img/05.jpg" alt="image projet 5" class="image_projet"/>
+						<a href="https://www.alibaba.com/premium/shopping_websites.html?src=sem_ggl&cmpgn=428133503&adgrp=27315502823&fditm=&tgt=kwd-148354261&locintrst=&locphyscl=1028581&mtchtyp=b&ntwrk=g&device=c&dvcmdl=&creative=87484856063&plcmnt=&plcmntcat=&p1=&p2=&aceid=&position=1t1&gclid=EAIaIQobChMIhtG8koTZ2QIVjBiPCh1xfANXEAAYASAAEgI1-fD_BwE" target="_blank">
+							<div class="div_transparente" id="9"></div>
+						</a>
+						<div id="titre_projet_9" class="titre_projet">
+							<div class="div_image">
+								<div class="cercle_bleu_bis"></div>
+								<i class="far fa-eye oeilBleu"></i>
+							</div><!-- l'icone -->
+							<div class="titre_projet_2">
+								<span class="span_titre">Shopping and Co</span><br/>
+								<span class="span_paragraphe">Site Web Commercial</span>
+							</div>
+						</div>		
+					</div>
+					<div class="projets">
+						<img src="img/06.jpg" alt="image projet 6" class="image_projet"/>
+						<a href="https://www.amazon.fr/vetements-accessoires-mode/b?ie=UTF8&node=340855031" target="_blank">
+							<div class="div_transparente" id="10"></div>
+						</a>
+						<div id="titre_projet_10" class="titre_projet">
+							<div class="div_image">
+								<div class="cercle_bleu_bis"></div>
+								<i class="far fa-eye oeilBleu"></i>
+							</div><!-- l'icone -->
+							<div class="titre_projet_2">
+								<span class="span_titre">Little Valley</span><br/>
+								<span class="span_paragraphe">Site Web Commercial</span>
+							</div>
+						</div>		
+					</div>
+					<div class="projets">
+						<img src="img/07.jpg" alt="image projet 7" class="image_projet"/>
+						<a href="https://www.zalando.fr/" target="_blank">
+							<div class="div_transparente" id="11"></div>
+						</a>
+						<div id="titre_projet_11" class="titre_projet">
+							<div class="div_image">
+								<div class="cercle_bleu_bis"></div>
+								<i class="far fa-eye oeilBleu"></i>
+							</div><!-- l'icone -->
+							<div class="titre_projet_2">
+								<span class="span_titre">Rocket Fashion</span><br/>
+								<span class="span_paragraphe">Vente en Ligne</span>
+							</div>
+						</div>		
+					</div>
+					<div class="projets">
+						<img src="img/08.jpg" alt="image projet 8" class="image_projet"/>
+						<a href="https://www.maxiburo.fr/" target="_blank">
+							<div class="div_transparente" id="12"></div>
+						</a>
+						<div id="titre_projet_12" class="titre_projet">
+							<div class="div_image">
+								<div class="cercle_bleu_bis"></div>
+								<i class="far fa-eye oeilBleu"></i>
+							</div><!-- l'icone -->
+							<div class="titre_projet_2">
+								<span class="span_titre">Office Furnitures</span><br/>
+								<span class="span_paragraphe">Vente en Ligne</span>
+							</div>
+						</div>		
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<section id="section_carte"><!-- derniere section de la page : la carte et le formulaire. position relative -->
+			<div id="carte"></div><!-- la carte activee grace a une cle Google Maps. Grace a une fonction JS, elle est responsive -->
+			<!--<div id="div_invisible_street_view"></div>-->
+			<div class="filtre_bleu"></div>
+			<div id="container_formulaire_1"><!-- le formulaire, positionne de facon abolue. Il descend sous la carte < 1110px -->
+				<div id="formulaire" class="provisoire">
+					<div id="address">
+						<h4>Contact Info</h4>
+						<strong>Web Agency</strong>
+						<p>3 Cable street</p>
+						<p>Wellington, New Zealand</p>
+					</div>
+					<form id="ajax-contact" method="post" action="mailer.php"><!-- le formulaire envoie une requete post qui est traitee par php et intercepte par ajax, afin de ne pas recharger toute la page au moment de l'envoi -->
+						<input type="text" placeholder="name" id="name" name = "name" required/>
+						<input type="email" placeholder="email" id="email" name = "email" required />
+						<input type="text" placeholder="subject" id="subject" name="subject" required/>
+						<textarea rows="10" cols="40" placeholder="message" id="message" name="message"></textarea>
+						<input type="submit" value ="Send Message"/>
+						<div id="form-messages"></div><!-- div ou apparait le message de confirmation d'envoi transmis par ajax -->
+					</form>
+				</div>
+			</div>
+		</section>
+		<script src="js/maps.js"></script><!-- le script qui utilse l'API pour situer la WebAgency, activer le marqueur de la carte et rendre cette dreniere responsive -->
+		<script src="https://maps.google.com/maps/api/js?key=AIzaSyAuyBrDnODYfoUESoQVwxJxpyZsFshnfBk&callback=initMap"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><!-- jquery -->
+		<script src="js/fleche_bleue.js"></script><!-- la fleche bleue de la navbar de la section "projets" -->
+		<script src="js/navbar.js"></script><!-- la navbar responsive de la page -->
+		<script src="js/bouton.js" ></script><!-- apparition et disparition des boutons du slider -->
+		<script src="js/info.js"></script><!-- le script qui delenche l'animation de la section "projet" -->
+		<script src="js/chargement.js"></script><!-- le script ajax qui recharge la section "projet" -->
+		<script src="js/ancre.js"></script><!-- script pour moduler la vitesse de descente vers les ancres de la page -->
+		<script src="js/mail.js"></script><!-- le script ajax du formulaire -->
+		<script src="js/filtre.js"></script><!-- filtre bleu -->
+	</body>
+</html>
