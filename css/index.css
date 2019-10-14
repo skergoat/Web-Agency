@@ -3,7 +3,7 @@
     font-family: 'robotomedium';
     src: url('../fonts/Roboto_Medium/Roboto-Medium-webfont.eot');
     src: url('../fonts/Roboto_Medium/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto_Medium/Roboto-Medium-webfont.woff2') format('woff2'),
+         /*url('../fonts/Roboto_Medium/Roboto-Medium-webfont.woff2') format('woff2'),*/
          url('../fonts/Roboto_Medium/Roboto-Medium-webfont.woff') format('woff'),
          url('../fonts/Roboto_Medium/Roboto-Medium-webfont.ttf') format('truetype'),
          url('../fonts/Roboto_Medium/Roboto-Medium-webfont.svg#robotomedium') format('svg');
@@ -45,12 +45,13 @@ h2 {													/* titres */
 	text-transform:uppercase;
 }
 
-h3{
+h1{
 
-	font-weight: 900;
+	font-weight: 600;
+	font-size:40px;
 }
 
-#container_slogan_slogan h3 {
+#container_slogan_slogan h1 {
 
 	text-transform:uppercase;
 }
@@ -58,6 +59,118 @@ h3{
 h4{
 
 	font-size:30px;
+}
+
+/* loader */
+
+.preloader-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; 
+  bottom: 0;
+  background: #10031B;
+  z-index : 10000000000; 
+}
+
+.percentage {
+  z-index: 100;
+   z-index : 10000000000000000; 
+  position:relative;
+  border: 1px solid #ccc;
+  text-align:center;
+  color: #190529;
+  line-height: 30px;
+  font-size : 15px;
+  font-family:'robotoregular', sans-serif;
+}
+
+.loader,
+.percentage{
+  height: 30px;
+  max-width: 500px; 
+  border: 2px solid #FFCC00;
+  border-radius: 20px;
+  font-weight: 300;
+  position: absolute; 
+  top: 0; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  margin : auto; 
+}
+.loader:after,
+.percentage:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.trackbar {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  color: #FFE98F;
+  text-align: center;
+  line-height: 30px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.99;
+}
+
+.loadbar {
+  width: 0%;
+  height: 100%;
+  background:#FBDD6E;
+  box-shadow: 0px 0px 14px 1px #FFE98F; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: flicker 5s infinite;
+  overflow: hidden;
+}
+
+.glow {
+  width: 0%;
+  height: 0%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 60px 10px#FFE98F;
+  position: absolute;
+  bottom: -5px;
+  animation: animation 5s infinite;
+}
+
+@keyframes animation {
+  10% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 0.86;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.75;
+  }
+}
+
+.wrap { 
+  background-image : url(http://wallpaperfx.com/view_image/little-girls-1600x900-wallpaper-5569.jpg);
+  background-position: left top; 
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover; 
+  width: 100%; 
+  height: 100%; 
+  position: relative;  
+  z-index : 1; 
 }								
 
 /***************************************************** NAVBAR *******************************************************/
@@ -90,6 +203,7 @@ nav, nav ul {					/* alignement horizontal des items dans la liste et de la list
 
 	display:flex;
 	justify-content:space-between;
+	margin-right:200px;
 }
 
 nav ul li {						/* position des items */
@@ -112,14 +226,15 @@ nav ul a {						/* lien qui rend "nav ul ul" cliquable */
 
 	display:block;
 	width:100px;
-	margin-right:50px;
+	/*margin-right:50px;*/
 	cursor: pointer;
+	border-top:4px solid transparent;
 }
 
-nav ul a:hover{					/* survol des a et border-top bleu */
+.active {
 
 	border-top:4px solid #4d90af;
-	padding-bottom:4px;
+
 }
 
 nav ul a {						/* style des items */
@@ -134,9 +249,9 @@ nav ul a {						/* style des items */
 	width:100%;
 }
 
-#liste1 li a{
+#liste1 li a {
 
-	height:74px;
+	height:80px;
 }
 
 #liste1 li a span {			/*********** sans le span ? */
@@ -235,7 +350,7 @@ nav ul a {						/* style des items */
 
 /***************************************************** EN-TETE *******************************************************/
 
-#container_slogan_slogan h3, #container_slogan_slogan p {
+#container_slogan_slogan h1, #container_slogan_slogan p {
 
 	color:white;				/* style du texte */
 }
@@ -276,22 +391,38 @@ nav ul a {						/* style des items */
 	text-align:center;
 }
 
+.fa-angle-left:before {
+
+	display:block;
+	margin:auto;
+	margin-right:10px;
+}
+
+.fa-angle-right:before {
+
+	display:block;
+	margin:auto;
+	margin-left:10px;
+}
+
 #container_bouton_2{			/* div contenant le bouton de droite */	
 
 	margin:auto;
 	margin-right:0px;
 }
 
-.bouton{						/* creation des boutons du slider */
+.bouton {						/* creation des boutons du slider */
 
 	width:50px;
 	border-top-left-radius:70px;
 	border-bottom-left-radius:70px;
 	text-align:center;
 	cursor:pointer;
-	padding-top:43px;
-	padding-bottom:43px;
-	font-size:20px;
+	padding-top:25px;
+	padding-bottom:25px;
+	font-size:40px;
+	background-color:rgba(0, 0, 0, 0.3);
+	color:white;
 }
 
 .bouton:active {					/* changement du bouton au moment du click  */
@@ -348,13 +479,13 @@ span{							/* couleur titre span  */
 	font-family:'robotoregular', sans-serif;
 }
 
-#en_tete_2 {					/* superposition des images du header pour creer le slider */
+/*#en_tete_2 {					 superposition des images du header pour creer le slider 
 
 	width:100%;
 	position:absolute;
-}
+}*/
 
-#en_tete_1 {					
+#en_tete_1, #en_tete_2 {					
 
 	width:100%;
 	position:relative;
@@ -375,6 +506,8 @@ span{							/* couleur titre span  */
 	position:absolute;
 	top:78px;
 	z-index:10;
+	width:100vw;
+	left:0px;
 }
 
 
@@ -438,7 +571,7 @@ span{							/* couleur titre span  */
  	width:50px;
  	height:50px;
  	border:1px solid #DADADA;
- 	margin-top:30px;
+ 	/*margin-top:30px;*/
 }
 
 
@@ -499,7 +632,7 @@ span{							/* couleur titre span  */
 	padding-top:50px;
 }
 
-#projets{						/* couleur de fond de la section */
+#nos_projets{						/* couleur de fond de la section */
 		
 	background-color:#F5F5F5;
 }
@@ -535,20 +668,32 @@ span{							/* couleur titre span  */
 #liste_projets li:nth-child(3):hover,
 #liste_projets li:nth-child(4):hover{
 
+	/*background-color:#70ABCF;
+	border-bottom:3px solid #588AAA;
+	padding-bottom:13px;
+	color:white;*/
+
+}								/* correction des bordures ds items au moment du survol */
+
+.active_projet {
+
 	background-color:#70ABCF;
 	border-bottom:3px solid #588AAA;
 	padding-bottom:13px;
 	color:white;
+}
 
-}								/* correction des bordures ds items au moment du survol */
+/*#liste_projets li:nth-child(1):hover{*/
 
-#liste_projets li:nth-child(1):hover{
+.radius_1 {
 
 	border-top-left-radius:7px;
 	border-bottom-left-radius:7px;
 }
 
-#liste_projets li:nth-child(4):hover{
+/*#liste_projets li:nth-child(4):hover{*/
+
+.radius_2 {
 
 	border-top-right-radius:7px;
 	border-bottom-right-radius:7px;
@@ -614,6 +759,7 @@ span{							/* couleur titre span  */
 	margin-top:10px;
 	margin-bottom:10px;
 	overflow:hidden;
+	position:relative;
 
 }
 
@@ -627,8 +773,10 @@ span{							/* couleur titre span  */
 .div_transparente{				/* div invisible, superposee a l'image et dont le survol declenche l'animation */
 
 	z-index:400;
-	position:relative;
-	top:-180px;
+	/*position:relative;*/
+	position:absolute;
+	/*top:-180px;*/
+	top:0px;
 	background-color:transparent;
 	width:260px;
 	height:173px;
@@ -640,7 +788,8 @@ span{							/* couleur titre span  */
 	height:100px;
 	width:100%;
 	position:relative;
-	top:-177px;
+	/*top:-177px;*/
+	top:0px;
 }
 		
 .div_image{						/* div contenant l'icone de l'oeil de la div animee */

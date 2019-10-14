@@ -1,7 +1,7 @@
 $(function(){ 
 
 	/* si click sur le filtre, il disparait */
-	$(document).click(function(){
+	$('#filtre_map').click(function(){
 
 		$('.filtre_bleu').removeClass('bleu');
 		$('.filtre_bleu').addClass('pasBleu');

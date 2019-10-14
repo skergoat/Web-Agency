@@ -1,5 +1,19 @@
 $(function(){
 
+	// border-top 
+
+	$('#liste1 li a:first').addClass('active');
+
+	$('#liste1 li a').mouseover(function() {
+
+		if(!$(this).hasClass('active')) {
+
+			$('li a').not(this).removeClass('active');
+			$(this).addClass('active');
+
+		}
+	});
+
 	// navbar fixed
 
 	var offset = $("nav").offset().top; // position top de la navbar 

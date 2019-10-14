@@ -2,7 +2,9 @@ $(function(){
 
 	// rechargement des "projets" via ajax 
 
-	var size = $('#projets').height(); // hauteur de la section "projets"
+	var size = $('#nos_projets').height(); // hauteur de la section "projets"
+
+	console.log(size);
 		
 	$('.bouton_projet').on('click', function(){ // au click sur un bouton de la nav...
 
@@ -11,15 +13,19 @@ $(function(){
 
 		box.fadeOut(500, function(){ // le conteneur disparait lentement avec ses projets 
 
-			$('#projets').css('height', size + 'px'); // on maintient la taille de la section "projets"
+			$('#nos_projets').css('height', size + 'px'); // on maintient la taille de la section "projets"
 													  // pour eviter que la section du dessous remonte
 													  // apres la disparition  
+
+			var test = $('#nos_projets').height();
+
+				console.log(idDiv + '.html');										  
 
 			box.load(idDiv + '.html', function(){ // on charge la nouvelle page 
 												  // le titre du fichier.html = l'id du bouton clique  
 				box.fadeIn(function(){
 
-					$('#projets').css('height', '100%');
+					$('#nos_projets').css('height', '100%');
 
 				}); 
 			});		

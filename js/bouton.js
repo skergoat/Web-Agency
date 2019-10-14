@@ -2,17 +2,17 @@ $(function(){ // script qui declenche l'apparition des boutons et l'animation du
 
 	// le bouton 
 
-	$('.bouton').css('background-color', 'black').css('color', 'white').css('opacity', '0'); // le bouton est invisible 
+	// $('.bouton').css('background-color', 'black').css('color', 'white').css('opacity', '0'); // le bouton est invisible 
 
-	$('.bouton').mouseover(function(){ // au :hover il apparait 
+	// $('.bouton').mouseover(function(){ // au :hover il apparait 
 
-		$('.bouton').animate({'opacity':'0.7'}, 1200);
-	}); 
+	// 	$('.bouton').animate({'opacity':'0.7'}, 1200);
+	// }); 
 
-	$('.bouton').mouseout(function(){ // a la fin du survol il disparait 
+	// $('.bouton').mouseout(function(){ // a la fin du survol il disparait 
 
-		$('.bouton').animate({'opacity':'0'}, 1000);
-	}); 
+	// 	$('.bouton').animate({'opacity':'0'}, 1000);
+	// }); 
 
 	// le slider 
 

@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset ="utf-8">
-		<meta name="viewport" content="width=device-width"/><!-- adaptation a la taille du device pour smartphone -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- adaptation a la taille du device pour smartphone -->
 		<title>Web Agency</title>
 		<link rel="icon" href="img/icone.png" />
 		<link rel="stylesheet" href="css/normalize.css"><!-- remise a zero des proprietes css du browser -->
@@ -11,6 +11,16 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"><!-- icones font awesome -->
 	</head>
 	<body ><!-- lancer la fonction qui va faire apparaitre la carte -->
+		<div class="preloader-wrap">
+		  <div class="percentage" id="precent"></div>
+		  <div class="loader">
+		    <div class="trackbar">
+		      <div class="loadbar"></div>
+		    </div>
+		    <div class="glow"></div>
+		  </div>
+		</div>
+
 		<div id="topPage"></div>
 		<nav><!-- la navbar pour ecrans sup a 950 px. En-dessus de 950px la nav disparait et laisse place a un "hamburger". Lorsqu'on clique dessus, une seconde nav depliante apparait -->
 			<div>
@@ -28,7 +38,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#projets">
+					<a href="#nos_projets">
 						<span >Projets</span>
 					</a>
 				</li>
@@ -61,14 +71,14 @@
 					</div>
 					<div id="container_slogan"><!-- div contenant le slogan et le bouton "plus d'info" -->
 						<div id="container_slogan_slogan">
-							<h3><span>WebAgency</span> : l'agence <br> de tous vos projets !</h3>
-							<p>Vous avez un projet ? Nous vous aidons à le réaliser !</p>
-							<a href="#projets" id="plus_dinfo">Plus d'info</a>
+							<h1><span>WebAgency</span> : l'agence <br> de tous vos projets !</h1> <!--  h1 h1 -->
+							<p>Vous voulez un site web sur mesure ? Nous le réalisons !</p>
+							<a href="#services" id="plus_dinfo">Plus d'info</a>
 						</div>
 					</div>
 				</div>
 				<div id="container_bouton_2"><!-- div contenant le bouton de droite -->
-					<i class="bouton fas fa-angle-right"></i>
+					<i id="bouton2"  class="bouton fas fa-angle-right"></i>
 				</div>
 			</div>
 		</div>
@@ -78,14 +88,14 @@
 
 			<picture id="picture1">
 			  <source media="(max-width: 500px)" srcset="img/Bis.png">
-			  <source media="(min-width: 1200px)" src="img/bg1.jpg">
+			  <source media="(min-width: 1200px)" srcset="img/bg1.jpg">
 			  <img src="img/bg1.jpg" alt="En-Tete 1" id="en_tete_1" class="imageR">
 			</picture>
 
 			<picture id="picture2">
 			  <source media="(max-width: 500px)" srcset="img/bg2Bis.png">
-			  <source media="(min-width: 1200px)" src="img/bg2.jpg">
-			  <img src="img/bg2.jpg" alt="En-Tete 1" id="en_tete_1" class="imageR">
+			  <source media="(min-width: 1200px)" srcset="img/bg2.jpg">
+			  <img src="img/bg2.jpg" alt="En-Tete 1" id="en_tete_2" class="imageR">
 			</picture>
 			<!--<img src="img/bg2.jpg" alt="En-Tete 2" id="en_tete_2" class="imageR">-->	
 					
@@ -142,25 +152,25 @@
 						</div>
 						<div>
 							<h3>SEO</h3>
-							<p>Specialistes du référencement sur Internet, nous rendons votre entreprise visible et l'aidons à se faire connaitre auprès de nouveaux clients</p>
+							<p>Spécialistes du référencement sur Internet, nous rendons votre entreprise visible et l'aidons à se faire connaitre auprès de nouveaux clients</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="container" id="projets"><!-- la deuxieme section de la page -->
+		<section class="container" id="nos_projets"><!-- la deuxieme section de la page -->
 			<div class="titre_section">
 				<h2>nos projets</h2><!-- le cercle et le trait. Le trait est le border-top de la div. Les reste est cache. Le cercle est centre puis surevele en position relative -->
 				<div class="trait_noir">
 					<div class="cercle_bleu"></div>
 				</div>
-				<p class="style_text">Toujours prêts à relever de nouveaux defis, nous sommes recherchés par les meilleurs pour nos solutions innovantes et notre expertise dans le domaine des nouvelles technologies</p>
+				<p class="style_text">Toujours prêts à relever de nouveaux défis, nous sommes recherchés par les meilleurs pour nos solutions innovantes et notre expertise dans le domaine des nouvelles technologies</p>
 			</div>
 			<ul id="liste_projets"><!-- la navbar qui contient les themes des differents "projets" de l'agence. Au hover elle change de couleur et la fleche apparait grace a JS -->
-				<li id="1" class="bouton_projet">Works</li>
+				<li id="1" class="bouton_projet radius_1">Works</li>
 				<li id="2" class="bouton_projet">Creative</li>
 				<li id="3" class="bouton_projet">Corporate</li>
-				<li id="4" class="bouton_projet">Portfolio</li>
+				<li id="4" class="bouton_projet radius_2">Portfolio</li>
 			</ul>
 			<ul id="div_fleche_bleue"><!-- les fleches bleues qui apparaissent au :hover -->
 				<li class="li_fleche"><img src="img/fleche_bleue1.png" alt="fleche bleue" id="fleche_bleue1" class="fleche_bleue"/></li>
@@ -309,15 +319,15 @@
 		<section id="section_carte"><!-- derniere section de la page : la carte et le formulaire. position relative -->
 			<div id="carte"></div><!-- la carte activee grace a une cle Google Maps. Grace a une fonction JS, elle est responsive -->
 			<!--<div id="div_invisible_street_view"></div>-->
-			<div class="filtre_bleu"></div>
+			<div class="filtre_bleu" id="filtre_map"></div>
 			<div id="container_formulaire_1"><!-- le formulaire, positionne de facon abolue. Il descend sous la carte < 1110px -->
 				<div id="formulaire" class="provisoire">
-					<div id="address">
+					<address id="address">
 						<h4>Contact Info</h4>
 						<strong>Web Agency</strong>
 						<p>3 Cable street</p>
 						<p>Wellington, New Zealand</p>
-					</div>
+					</address>
 					<form id="ajax-contact" method="post" action="mailer.php"><!-- le formulaire envoie une requete post qui est traitee par php et intercepte par ajax, afin de ne pas recharger toute la page au moment de l'envoi -->
 						<input type="text" placeholder="name" id="name" name = "name" required/>
 						<input type="email" placeholder="email" id="email" name = "email" required />
@@ -329,9 +339,13 @@
 				</div>
 			</div>
 		</section>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="js/loader.js"></script>
+		<!-- <script src="https://www.skergoat.com/webagency/js/loader.js"></script> -->
 		<script src="js/maps.js"></script><!-- le script qui utilse l'API pour situer la WebAgency, activer le marqueur de la carte et rendre cette dreniere responsive -->
 		<script src="https://maps.google.com/maps/api/js?key=AIzaSyAuyBrDnODYfoUESoQVwxJxpyZsFshnfBk&callback=initMap"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><!-- jquery -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> --><!-- jquery -->
 		<script src="js/fleche_bleue.js"></script><!-- la fleche bleue de la navbar de la section "projets" -->
 		<script src="js/navbar.js"></script><!-- la navbar responsive de la page -->
 		<script src="js/bouton.js" ></script><!-- apparition et disparition des boutons du slider -->
