@@ -1,3 +1,11 @@
+@media all and (max-width:1440px) {
+
+	.description {
+
+		width:90%;
+	}
+}
+
 
 @media screen and (max-width: 1230px)	
 {	
@@ -7,10 +15,10 @@
 		padding-left:0px;
 	}
 
-	#container_slogan_slogan {
+	/*#container_slogan_slogan {
 
 		padding-left:0px;
-	}
+	}*/
 }
 
 /***************************************************** 1106 px *******************************************************/
@@ -62,6 +70,26 @@
 		align-items:center;
 		justify-content:center;
 	}
+
+	#container_container_slogan {
+
+		padding-top:7%;
+	}
+
+	#container_slogan_slogan {
+
+		padding-left:0px;
+	}
+
+	#container_slogan_slogan h1 {
+
+		font-size:25px;
+	}
+
+	#container_slogan {
+
+		padding-left:50px;
+	}
 }
 
 /***************************************************** 950 px *******************************************************/
@@ -73,6 +101,12 @@
 	p, h2, h3 {					/* titres et p */
 
 		text-align:center;
+	}
+
+	#container_slogan_slogan p {
+
+		text-align:left;
+		width:250px;
 	}
 
 	nav ul {				/* disparition des items de la nav > 950 px */
@@ -148,10 +182,10 @@
 		padding-left:20px;
 	}
 
-	#container_slogan p{		/* disparition du p du header */
+	/*#container_slogan p{		 disparition du p du header 
 
 		display:none;
-	}
+	}*/
 
 	#container_slogan h3{		/* ajustement du h3 du header */
 
@@ -170,11 +204,15 @@
 		margin-left:0px;
 	}
 
+	.description {
+
+		width:100%;
+	}
+
 	#ordinateur, .icones{		/* position des images de la div "services" */
 
 		display:block;
 		margin:auto;
-		
 	}
 
 	.flex_container{			/* conteneur des icones des "services" */
@@ -182,6 +220,21 @@
 		display:flex;
 		align-items:center;
 		justify-content: center;
+	}
+
+	.style_text {
+
+		width:100%;
+	}
+
+	.ordi {
+
+		width:100%;
+	}
+
+	.ordi img {
+
+		position: relative;
 	}
 
 	.image_div{					/* repositionnement dfes icones "services" */
@@ -210,11 +263,11 @@
 		margin-left:100px;
 	}
 
-	.style_text{					/* style du conteneur des textes des "services" */
+	/*.style_text{					 style du conteneur des textes des "services" 
 
 		margin-left:20px;
 		margin-right:20px;
-	}
+	}*/
 }
 
 /***************************************************** 863 px *******************************************************/
@@ -247,23 +300,85 @@
 		align-items: center;
 	}
 
-	.style_text{					/* style du conteneur des textes des "services" */
+	#container_slogan_slogan {
+
+		margin-right:0px;
+	}
+
+	#container_container_slogan {
+
+		padding-top:5%;
+	}
+
+
+	/*.style_text{					 style du conteneur des textes des "services" 
 
 		margin-left:20px;
 		margin-right:20px;
-	}
+	}*/
 }
 
 /***************************************************** 737 px *******************************************************/
 
 
-@media screen and (max-width: 737px)
-{
-
-	#container_slogan {			
+@media screen and (max-width: 700px)
+{	
+	#container_bouton_2, #container_bouton_1 {
 
 		display:none;
-	}	
+	}
+
+	#en_tete_1, #en_tete_2 {
+
+		width: 100%;
+	    position: relative;
+	    top: 0px;
+	    height: 100vh;
+	    /* width: 160vw; */
+	    object-fit: cover;
+	}
+
+	#container_container_slogan {
+
+		padding-top:0px;
+	}
+
+	#container_container_slogan_1 {
+
+		height:100vh;
+		position:relative;
+	}
+
+	#container_container_slogan_2 {
+
+		position:absolute;
+		bottom:0px;
+		width:100%;
+		background:rgba(255, 255, 255, 0.5);
+	}
+
+	#container_slogan {
+
+		padding:0px;
+		margin:auto;
+		padding-bottom:20px;
+	}
+
+	#container_slogan_slogan {
+
+		width:100%;
+	}
+
+	#container_slogan_slogan p, #container_slogan_slogan h1 {
+
+		color:#444444;
+	}
+
+	#plus_dinfo {
+
+		margin:auto;
+	}
+
 }
 
 /***************************************************** 600 px *******************************************************/
@@ -295,10 +410,10 @@
 		width:100%;
 	}
 
-	.style_text{					/* style du conteneur des textes des "services" */
+	/*.style_text{					 style du conteneur des textes des "services" 
 
 		margin-left:20px;
-	}
+	}*/
 
 	#container_bouton_2, #container_bouton_1{
 
@@ -354,7 +469,7 @@
 	}
 
 	
-	#en_tete_2 {					
+	/*#en_tete_2 {					
 		
 		max-width:100%;
 		height:auto;
@@ -364,7 +479,7 @@
 
 		max-height:100%;
 		height:auto;
-	}
+	}*/
 
 	#icon1{					/* position du "hamburger" */
 

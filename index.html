@@ -73,7 +73,7 @@
 						<div id="container_slogan_slogan">
 							<h1><span>WebAgency</span> : l'agence <br> de tous vos projets !</h1> <!--  h1 h1 -->
 							<p>Vous voulez un site web sur mesure ? Nous le réalisons !</p>
-							<a href="#services" id="plus_dinfo">Plus d'info</a>
+							<div id="plus_dinfo"><a href="#services">Plus d'info</a></div>
 						</div>
 					</div>
 				</div>
@@ -87,13 +87,13 @@
 			<!-- le balises <pictures> permettent d'avoir des images responsives -->
 
 			<picture id="picture1">
-			  <source media="(max-width: 500px)" srcset="img/Bis.png">
+			  <source media="(max-width: 700px)" srcset="img/Bis.png">
 			  <source media="(min-width: 1200px)" srcset="img/bg1.jpg">
 			  <img src="img/bg1.jpg" alt="En-Tete 1" id="en_tete_1" class="imageR">
 			</picture>
 
 			<picture id="picture2">
-			  <source media="(max-width: 500px)" srcset="img/bg2Bis.png">
+			  <source media="(max-width: 700px)" srcset="img/bg2Bis.png">
 			  <source media="(min-width: 1200px)" srcset="img/bg2.jpg">
 			  <img src="img/bg2.jpg" alt="En-Tete 1" id="en_tete_2" class="imageR">
 			</picture>
@@ -109,11 +109,11 @@
 				<p>Création du design ou construction d'un site internet : notre agence vous accompagne pour réaliser vos projets et refléter votre image de marque</p>
 			</div>
 			<div class="flex">
-				<div><!-- l'image d'ordinateur -->
+				<div class="ordi"><!-- l'image d'ordinateur -->
 					<img src="img/ordinateur.png" alt="ordinateur" id="ordinateur"/>
 				</div>
 				<div class="style_text"><!-- les "services" de la WebAgency -->
-					<div class="flex">
+					<div class="flex description">
 						<div class="flex_container">
 							<div class="image_div">
 								<div class="trait_gris">
@@ -127,7 +127,7 @@
 							<p>Nous organisons votre site pour permettre la meilleure expérience utilisateur et permettre à votre entreprise d'attirer de nouveaux clients</p>
 						</div>
 					</div>
-					<div class="flex">
+					<div class="flex description">
 						<div class="flex_container">
 							<div class="image_div">
 								<div class="trait_gris">
@@ -141,7 +141,7 @@
 							<p>Nos designers sont experts dans la création de sites confortables, élegants, intuitifs et surtout fidèles à l'image de marque de votre entreprise</p>
 						</div>
 					</div>
-					<div class="flex">
+					<div class="flex description">
 						<div class="flex_container">
 							<div class="image_div">
 								<div class="trait_gris">
@@ -322,8 +322,8 @@
 			<div class="filtre_bleu" id="filtre_map"></div>
 			<div id="container_formulaire_1"><!-- le formulaire, positionne de facon abolue. Il descend sous la carte < 1110px -->
 				<div id="formulaire" class="provisoire">
+					<h5>Contact Info</h5>
 					<address id="address">
-						<h4>Contact Info</h4>
 						<strong>Web Agency</strong>
 						<p>3 Cable street</p>
 						<p>Wellington, New Zealand</p>

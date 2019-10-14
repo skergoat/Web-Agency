@@ -463,7 +463,7 @@ span{							/* couleur titre span  */
 	font-size:15px;
 }
 
-#plus_dinfo{					/* bouton d'info */ 
+#plus_dinfo {					/* bouton d'info */ 
 
 	padding-top:10px;
 	padding-bottom:10px;
@@ -477,6 +477,13 @@ span{							/* couleur titre span  */
 	border-radius:7px;
 	color:white;
 	font-family:'robotoregular', sans-serif;
+	width:80px;
+}
+
+#plus_dinfo a {
+
+	text-decoration: none;
+	color:white;
 }
 
 /*#en_tete_2 {					 superposition des images du header pour creer le slider 
@@ -551,13 +558,39 @@ span{							/* couleur titre span  */
 .flex{							/* positionnement des "services" (UX, UI, etc.) */
 
 	display:flex;
+	justify-content:center;
 }
 
-.style_text{					/* style du conteneur des textes des "services" */
+.description {
+
+	width:80%;
+}
+
+.ordi {
+
+	width:50%;
+	position:relative;
+	/*display:flex;
+	justify-content:flex-end;*/
+}
+
+.ordi img {
+
+	display:block;
+	position: absolute;
+    right: 0px;
+}
+
+.style_text {
+
+	width:50%;
+}
+
+/*.style_text{					 style du conteneur des textes des "services" 
 
 	margin-left:70px;
 	margin-right:20px;
-}
+}*/
 
 .flex p {						/* style du p des "services" */
 
@@ -568,8 +601,8 @@ span{							/* couleur titre span  */
 .trait_gris{					/* cercle gris autour des icones des "services" */
 
  	border-radius:50%;
- 	width:50px;
- 	height:50px;
+ 	width:60px;
+ 	height:60px;
  	border:1px solid #DADADA;
  	/*margin-top:30px;*/
 }
@@ -580,9 +613,9 @@ span{							/* couleur titre span  */
 	color:#70ABCF;
 	display:block;
 	position:relative;
-	top:16px;
-	left:16px;
-	font-size:18px;
+	top:17px;
+	left:19px;
+	font-size:25px;
 }
 
 
@@ -595,7 +628,7 @@ span{							/* couleur titre span  */
  	border:2px solid white;
  	position:relative;
  	top:-35px;
- 	right:-43px;
+ 	right:-53px;
 }
 
 .icones {						/* style des icones des "services" */
@@ -628,7 +661,7 @@ span{							/* couleur titre span  */
 .container{						/* section generale */
 
 	width:100%;
-	padding-bottom:100px;
+	padding-bottom:50px;
 	padding-top:50px;
 }
 
@@ -785,7 +818,8 @@ span{							/* couleur titre span  */
 
 .titre_projet{					/* div general animee*/		
 
-	height:100px;
+	/*height:100px;*/
+	height:150px;
 	width:100%;
 	position:relative;
 	/*top:-177px;*/
@@ -897,7 +931,7 @@ span{							/* couleur titre span  */
 
 	margin-left:62%;
 	width:400px;
-	margin-top:50px;
+	margin-top:30px;
 	padding-bottom:50px;
 	border:1px solid grey;
 	background-color:rgba(208, 208, 208, 0.9);
@@ -911,6 +945,22 @@ span{							/* couleur titre span  */
 	line-height:8px;
 	margin-left:20px;
 	margin-right:20px;
+}
+
+#address {
+
+	margin-top:10px;
+}
+
+#formulaire h5 {
+
+	font-size:25px;
+	font-weight:bold;
+	font-style:normal;
+	color:black;
+	margin-bottom:15px;
+	margin-top:20px;
+	margin-left:20px;
 }
 
 #address p:last-child{
