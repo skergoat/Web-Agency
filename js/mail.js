@@ -31,7 +31,7 @@ $(function() {
 		    $(formMessages).addClass('success');
 
 		    // Changer le texte du message 
-		    $(formMessages).text(response);
+		     $(formMessages).text('Message envoyé');
 
 		    // Vider le formulaire 
 		    $('#name').val('');

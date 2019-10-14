@@ -328,11 +328,11 @@
 						<p>3 Cable street</p>
 						<p>Wellington, New Zealand</p>
 					</address>
-					<form id="ajax-contact" method="post" action="mailer.php"><!-- le formulaire envoie une requete post qui est traitee par php et intercepte par ajax, afin de ne pas recharger toute la page au moment de l'envoi -->
+					<form id="ajax-contact" method="post" action="mail.php"><!-- le formulaire envoie une requete post qui est traitee par php et intercepte par ajax, afin de ne pas recharger toute la page au moment de l'envoi -->
 						<input type="text" placeholder="name" id="name" name = "name" required/>
 						<input type="email" placeholder="email" id="email" name = "email" required />
 						<input type="text" placeholder="subject" id="subject" name="subject" required/>
-						<textarea rows="10" cols="40" placeholder="message" id="message" name="message"></textarea>
+						<textarea rows="10" cols="40" placeholder="message" id="message" name="message" required></textarea>
 						<input type="submit" value ="Send Message"/>
 						<div id="form-messages"></div><!-- div ou apparait le message de confirmation d'envoi transmis par ajax -->
 					</form>
