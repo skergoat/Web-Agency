@@ -24,9 +24,10 @@
 	    <meta property="og:site_name" content="Webagency" />
 
 		<link rel="stylesheet" href="css/normalize.css"><!-- remise a zero des proprietes css du browser -->
-		<link rel="stylesheet" href="css/index.css"/><!-- feuille de style -->
-		<link rel="stylesheet" href="css/media.css"/><!-- les media queries -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"><!-- icones font awesome -->
+		<link rel="stylesheet" href="css/style.css"/><!-- feuille de style -->
+		<link rel="stylesheet" href="css/media.css"/><!-- les media queries -->
+		
 	</head>
 	<body ><!-- lancer la fonction qui va faire apparaitre la carte -->
 		<div class="preloader-wrap">
@@ -77,45 +78,38 @@
 			<ul id="nav_responsive"> <!-- display : block <a> -->
 				<li><a href="#nav_bis"><span class="montest">Accueil</span></a></li>
 				<li><a href="#services"><span class="montest">Service</span></a></li>
-				<li><a href="#projets"><span class="montest">Portfolio</span></a></li>
+				<li><a href="#nos_projets"><span class="montest">Portfolio</span></a></li>
 				<li><a href="#container_formulaire_1" class="click_responsive navbis"><span class="montest">Contact</span></a></li>
 			</ul>
 		</div>
-		<div id="container_container_slogan"><!-- conteneur du slogan qui permet le positionnement absolu sur le header -->
-			<div id="container_container_slogan_1"><!-- conteneur qui permet l'alignement horizontal du slogan et des boutons -->
-				<div id="container_container_slogan_2"><!-- conteneur du bouton gauche et du slogan -->
-					<div id="container_bouton_1"><!-- div contenant le bouton de gauche -->
-						<i id="bouton1" class="bouton fas fa-angle-left"></i>
-					</div>
-					<div id="container_slogan"><!-- div contenant le slogan et le bouton "plus d'info" -->
-						<div id="container_slogan_slogan">
-							<h1><span>WebAgency</span> : l'agence <br> de tous vos projets !</h1> <!--  h1 h1 -->
-							<p>Vous voulez un site web sur mesure ? Nous le réalisons !</p>
-							<div id="plus_dinfo"><a href="#services">Plus d'info</a></div>
-						</div>
-					</div>
+		
+		<header><!-- le "slider" d'en-tete. Les 2 images somnt superposees et disparaissent puis apparaissent succesivement -->
+
+			<div class="container-boutons">
+				<div id="container_bouton_1"><!-- div contenant le bouton de gauche -->
+					<i id="bouton1" class="bouton icon-left-open-big"></i>
 				</div>
 				<div id="container_bouton_2"><!-- div contenant le bouton de droite -->
-					<i id="bouton2"  class="bouton fas fa-angle-right"></i>
+					<i id="bouton2"  class="bouton icon-right-open-big"></i>
 				</div>
 			</div>
-		</div>
-		<header><!-- le "slider" d'en-tete. Les 2 images somnt superposees et disparaissent puis apparaissent succesivement -->
+
+			<div class="container-slogan">
+				<div id="container_slogan_slogan">
+					<h1><span>WebAgency</span> : l'agence de tous vos projets !</h1> <!--  h1 h1 -->
+					<p>Vous voulez un site web sur mesure ? Nous le réalisons !</p>
+					<div id="plus_dinfo"><a href="#services">Plus d'infos</a></div>
+				</div>
+			</div>
 
 			<!-- le balises <pictures> permettent d'avoir des images responsives -->
 
-			<picture id="picture1">
-			  <source media="(max-width: 700px)" srcset="img/Bis.jpg">
-			  <source media="(min-width: 1200px)" srcset="img/bg1.jpg">
-			  <img src="img/bg1.jpg" alt="En-Tete 1" id="en_tete_1" class="imageR">
-			</picture>
+			<img src="img/Bis.jpg" alt="En-Tete 1" id="responsive_1" class="mobile">
+			<img src="img/bg2Bis.jpg" alt="En-Tete 1" id="responsive_2" class="mobile">
 
-			<picture id="picture2">
-			  <source media="(max-width: 700px)" srcset="img/bg2Bis.jpg">
-			  <source media="(min-width: 1200px)" srcset="img/bg2.jpg">
-			  <img src="img/bg2.jpg" alt="En-Tete 1" id="en_tete_2" class="imageR">
-			</picture>
-					
+			<img src="img/bg1.jpg" alt="En-Tete 1" id="en_tete_1" class="desktop">
+			<img src="img/bg2.jpg" alt="En-Tete 1" id="en_tete_2" class="desktop">
+
 		</header>
 		<section class="container" id="services"><!-- la premiere section de la page -->
 			<div class="titre_section">
@@ -148,7 +142,7 @@
 						<div class="flex_container">
 							<div class="image_div">
 								<div class="trait_gris">
-									<i class="fas fa-edit mafont"></i>
+									<i class="fas fa-cubes mafont"></i>
 								</div>
 								<div class="cercle_bleu_tierce"></div>
 							</div>
@@ -181,10 +175,10 @@
 				<div class="trait_noir">
 					<div class="cercle_bleu"></div>
 				</div>
-				<p class="style_text">Toujours prêts à relever de nouveaux défis, nous sommes recherchés par les meilleurs pour nos solutions innovantes et notre expertise dans le domaine des nouvelles technologies</p>
+				<p>Toujours prêts à relever de nouveaux défis, nous sommes recherchés par les meilleurs pour nos solutions innovantes et notre expertise dans le domaine des nouvelles technologies</p>
 			</div>
 			<ul id="liste_projets"><!-- la navbar qui contient les themes des differents "projets" de l'agence. Au hover elle change de couleur et la fleche apparait grace a JS -->
-				<li id="1" class="bouton_projet radius_1">Works</li>
+				<li id="1" class="bouton_projet radius_1">All Works</li>
 				<li id="2" class="bouton_projet">Creative</li>
 				<li id="3" class="bouton_projet">Corporate</li>
 				<li id="4" class="bouton_projet radius_2">Portfolio</li>
@@ -340,16 +334,16 @@
 			<div id="container_formulaire_1"><!-- le formulaire, positionne de facon abolue. Il descend sous la carte < 1110px -->
 				<div id="formulaire" class="provisoire">
 					<h5>Contact Info</h5>
-					<address id="address">
-						<strong>Web Agency</strong>
-						<p>3 Cable street</p>
-						<p>Wellington, New Zealand</p>
-					</address>
+					<div id="address">
+						<strong>WebAgency SAS</strong>
+						<p>25 rue d'Hauteville 75010 Paris</p>
+						<p>tel: 01 02 03 04 05</p>
+					</div>
 					<form id="ajax-contact" method="post" action="mail.php"><!-- le formulaire envoie une requete post qui est traitee par php et intercepte par ajax, afin de ne pas recharger toute la page au moment de l'envoi -->
-						<input type="text" placeholder="name" id="name" name = "name" required/>
-						<input type="email" placeholder="email" id="email" name = "email" required />
-						<input type="text" placeholder="subject" id="subject" name="subject" required/>
-						<textarea rows="10" cols="40" placeholder="message" id="message" name="message" required></textarea>
+						<input type="text" placeholder="Name" id="name" name = "name" required/>
+						<input type="email" placeholder="Email" id="email" name = "email" required />
+						<input type="text" placeholder="Subject" id="subject" name="subject" required/>
+						<textarea rows="10" cols="40" placeholder="Message" id="message" name="message" required></textarea>
 						<input type="submit" value ="Send Message"/>
 						<div id="form-messages"></div><!-- div ou apparait le message de confirmation d'envoi transmis par ajax -->
 					</form>
@@ -365,7 +359,7 @@
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> --><!-- jquery -->
 		<script src="js/fleche_bleue.js"></script><!-- la fleche bleue de la navbar de la section "projets" -->
 		<script src="js/navbar.js"></script><!-- la navbar responsive de la page -->
-		<script src="js/bouton.js" ></script><!-- apparition et disparition des boutons du slider -->
+		<script src="js/bouton.js" ></script> <!-- apparition et disparition des boutons du slider -->
 		<script src="js/info.js"></script><!-- le script qui delenche l'animation de la section "projet" -->
 		<script src="js/chargement.js"></script><!-- le script ajax qui recharge la section "projet" -->
 		<script src="js/ancre.js"></script><!-- script pour moduler la vitesse de descente vers les ancres de la page -->

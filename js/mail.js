@@ -32,12 +32,21 @@ $(function() {
 
 		    // Changer le texte du message 
 		     $(formMessages).text('Message envoyé');
+		     $('#formulaire').css('padding-bottom', '50px');
 
 		    // Vider le formulaire 
 		    $('#name').val('');
 		    $('#email').val('');
 		    $('#subject').val('');
 		    $('#message').val('');
+
+		    setTimeout(function() {
+
+		    	// Changer le texte du message 
+		     	$(formMessages).text('');
+		     	$('#formulaire').css('padding-bottom', '-=50px');
+
+		    }, 50000);
 		})
 
 		.fail(function(data) {

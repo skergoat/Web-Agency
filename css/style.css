@@ -21,8 +21,55 @@
          url('../fonts/Roboto_Regular/Roboto-Regular-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello/font/fontello.eot?35154637');
+  src: url('../fonts/fontello/font/fontello.eot?35154637#iefix') format('embedded-opentype'),
+       url('../fonts/fontello/font/fontello.woff2?35154637') format('woff2'),
+       url('../fonts/fontello/font/fontello.woff?35154637') format('woff'),
+       url('../fonts/fontello/font/fontello.ttf?35154637') format('truetype'),
+       url('../fonts/fontello/font/fontello.svg?35154637#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ /* slider arrows */
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: bold;
+  font-size:17px;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  
+  font-variant: normal;
+  text-transform: none;
+ 
+  line-height: 1em;
+ 
+  margin-left: .2em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+.icon-right-open-big:before { content: '\e800'; color:white; padding-left:7px;  } /* '' */
+.icon-left-open-big:before { content: '\e801'; color:white; padding-right:7px; } /* '' */
+
+
+.mobile {
+
+		display:none;
+	}
+
 
 h1, h2, h3, strong, .span_titre, .span_paragraphe { 	/* fonts de la page */
 
@@ -32,7 +79,7 @@ h1, h2, h3, strong, .span_titre, .span_paragraphe { 	/* fonts de la page */
 p, nav ul li, #liste_projets li, #nav_responsive a li {	
 
 	font-family:'robotoregular', sans-serif;
-	color:#6C6F74;
+	color:#75797C;
 	font-size:15px;
 }
 
@@ -48,7 +95,8 @@ h2 {													/* titres */
 h1{
 
 	font-weight: 600;
-	font-size:40px;
+	font-size:35px;
+	margin:0px;
 }
 
 #container_slogan_slogan h1 {
@@ -233,7 +281,7 @@ nav ul a {						/* lien qui rend "nav ul ul" cliquable */
 
 .active {
 
-	border-top:4px solid #4d90af;
+	border-top:4px solid #5CADD3;
 
 }
 
@@ -282,7 +330,7 @@ nav ul a {						/* style des items */
   position: absolute;
   height: 7px;
   width: 100%;
-  background: #d3531a;
+  background: #5CADD3;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -350,12 +398,18 @@ nav ul a {						/* style des items */
 
 /***************************************************** EN-TETE *******************************************************/
 
+header {
+
+	position:relative;
+	z-index:1;
+}
+
 #container_slogan_slogan h1, #container_slogan_slogan p {
 
 	color:white;				/* style du texte */
 }
 
-#container_container_slogan{	/* div qui contient la div contenant le slogan et les boutons et place en position absolute */
+/*#container_container_slogan{	
 
 	display:flex;
 	justify-content:space-between;
@@ -363,23 +417,24 @@ nav ul a {						/* style des items */
 	z-index: 100;
 	width:100%;
 	padding-top:10%;
-}
+}*/
 
-#container_container_slogan_1{	/* div contenant le slogan et les boutons et qui permet leur alignement horizontal */	
+/*#container_container_slogan_1{		
 
 	width:100%;
 	display:flex;
 }
 
-#container_container_slogan_2{	/* div contenant le bouton gauche et le slogan */	
+#container_container_slogan_2{	/	
 
 	display:flex;
-}
+}*/
 
-#container_bouton_1{			/* div contenant le bouton de gauche */	
+#container_bouton_1{			
 
 	margin:auto;
 	margin-right:0px;
+	margin-left:0px;
 }
 
 #bouton1{						/* fleche et bouton */
@@ -391,7 +446,7 @@ nav ul a {						/* style des items */
 	text-align:center;
 }
 
-.fa-angle-left:before {
+/*.fa-angle-left:before {
 
 	display:block;
 	margin:auto;
@@ -403,6 +458,17 @@ nav ul a {						/* style des items */
 	display:block;
 	margin:auto;
 	margin-left:10px;
+}*/
+
+.container-boutons {
+
+	height:50px;
+	width:100%;
+	position:absolute;
+	top:43%;
+	z-index:100;
+	display:flex;
+	justify-content:space-between;
 }
 
 #container_bouton_2{			/* div contenant le bouton de droite */	
@@ -413,37 +479,48 @@ nav ul a {						/* style des items */
 
 .bouton {						/* creation des boutons du slider */
 
-	width:50px;
+	/*width:40px;*/
 	border-top-left-radius:70px;
 	border-bottom-left-radius:70px;
 	text-align:center;
 	cursor:pointer;
 	padding-top:25px;
 	padding-bottom:25px;
-	font-size:40px;
+	/*font-size:40px;*/
 	background-color:rgba(0, 0, 0, 0.3);
-	color:white;
+	/*color:white;*/
+	padding-left:3px;
 }
 
 .bouton:active {					/* changement du bouton au moment du click  */
 	background-color:rgba(0, 0, 0, 0.5);	
 }
 		
-#container_slogan{				/* conteneur ou l'on va positionner le slogan */
+/*#container_slogan{			
 
 	text-align:left;
 	font-size:200%;
 	position:relative;
 	z-index:2;
 }
+*/
+.container-slogan { 	/* conteneur ou l'on va positionner le slogan */
 
-#container_slogan_slogan{		/* ajustement du slogan dans son conteneur */		
+	height:auto;
+	width:600px;
+	position:absolute;
+	top:35%;
+	left:150px;
+	z-index:200;
+}
+
+/*#container_slogan_slogan{		 ajustement du slogan dans son conteneur 		
 
 	width:540px;
 	margin-right:100px;
 	padding-left:100px;
 
-}
+}*/
 
 #container_slogan_slogan h3{	/* position du slogan-titre */
 
@@ -453,14 +530,15 @@ nav ul a {						/* style des items */
 
 span{							/* couleur titre span  */
 
-	color:#70ABCF;
+	color:#5CADD3;
 }
 
 #container_slogan_slogan p{		/* conteneur du slogan-p */
 
 	font-size:20px;
-	margin-top:10px;
+	margin-top:15px;
 	font-size:15px;
+	margin-bottom:20px;
 }
 
 #plus_dinfo {					/* bouton d'info */ 
@@ -471,13 +549,14 @@ span{							/* couleur titre span  */
 	padding-left:10px;
 	cursor:pointer;
 	text-decoration: none;
-	background-color:#70ABCF;
-	border-bottom:3px solid #488CB4;
+	background-color:#5CADD3;
+	border-bottom:3px solid #4594BB;
 	font-size:17px;
-	border-radius:7px;
+	/*border-radius:7px;*/
 	color:white;
 	font-family:'robotoregular', sans-serif;
-	width:80px;
+	width:100px;
+	text-align:center;
 }
 
 #plus_dinfo a {
@@ -501,20 +580,24 @@ span{							/* couleur titre span  */
 
 /* conteneurs responsive des images */
 
-#picture1 {
+#en_tete_1 {
 
 	position:relative;
 	top:0px;
 	z-index:20;
 }
 
-#picture2 {
+#en_tete_2 {
 
 	position:absolute;
-	top:78px;
 	z-index:10;
 	width:100vw;
 	left:0px;
+}
+
+.mobile {
+
+	display:none;
 }
 
 
@@ -537,7 +620,7 @@ span{							/* couleur titre span  */
 
  .cercle_bleu {					/* cercle bleu et blanc sur le trait noir */
 
- 	background:#70ABCF;
+ 	background:#5CADD3;
  	border-radius:50%;
  	width:20px;
  	height:20px;
@@ -584,18 +667,19 @@ span{							/* couleur titre span  */
 .style_text {
 
 	width:50%;
+	padding-top:50px;
 }
-
-/*.style_text{					 style du conteneur des textes des "services" 
-
-	margin-left:70px;
-	margin-right:20px;
-}*/
 
 .flex p {						/* style du p des "services" */
 
 	line-height:30px;
 	margin-right:10%;
+	margin-top:5px;
+}
+
+.flex h3 {
+
+	margin-bottom:0px;
 }
 
 .trait_gris{					/* cercle gris autour des icones des "services" */
@@ -610,12 +694,12 @@ span{							/* couleur titre span  */
 
 .mafont {							/* icones font awesome */
 
-	color:#70ABCF;
+	color:#5CADD3;
 	display:block;
 	position:relative;
-	top:17px;
-	left:19px;
-	font-size:25px;
+	top: 16px;
+    left: 17px;
+    font-size: 27px;
 }
 
 
@@ -624,7 +708,7 @@ span{							/* couleur titre span  */
 	border-radius:50%;
  	width:12px;
  	height:12px;
- 	background-color:#70ABCF; 
+ 	background-color:#5CADD3; 
  	border:2px solid white;
  	position:relative;
  	top:-35px;
@@ -642,7 +726,8 @@ span{							/* couleur titre span  */
 
 .image_div{						/* position des icones des p de "services" */ 
 
-	margin-right:20px;
+	margin-right:30px;
+	margin-top:19px;
 }
 
  /***************************************************** SECTION 2 - "PROJETS" *******************************************************/
@@ -672,7 +757,7 @@ span{							/* couleur titre span  */
 
 #liste_projets{					/* style de l'ensemble de la liste */
 
-	background-color:grey;
+	background-color:#E5E5E5;
 	display:flex;
 	width:443px;
 	margin:auto;
@@ -694,26 +779,14 @@ span{							/* couleur titre span  */
 
 	border-right:none;
 }						
-									/* changement de styles des items au survol */
-
-#liste_projets li:nth-child(1):hover, 
-#liste_projets li:nth-child(2):hover,
-#liste_projets li:nth-child(3):hover,
-#liste_projets li:nth-child(4):hover{
-
-	/*background-color:#70ABCF;
-	border-bottom:3px solid #588AAA;
-	padding-bottom:13px;
-	color:white;*/
-
-}								/* correction des bordures ds items au moment du survol */
+								/* correction des bordures ds items au moment du survol */
 
 .active_projet {
 
-	background-color:#70ABCF;
-	border-bottom:3px solid #588AAA;
+	background-color:#5CADD3;
+	border-bottom:3px solid #478CAD;
 	padding-bottom:13px;
-	color:white;
+	color:white !important;
 }
 
 /*#liste_projets li:nth-child(1):hover{*/
@@ -836,9 +909,9 @@ span{							/* couleur titre span  */
 
  	background:#70ABCF;
  	border-radius:50%;
- 	width:40px;
- 	height:40px;
- 	border:5px solid white;
+ 	width:35px;
+ 	height:35px;
+ 	border:3px solid white;
  	position:relative;
  	margin-right:10px;
  	top:25px;
@@ -848,7 +921,9 @@ span{							/* couleur titre span  */
  .oeilBleu{
 
  	position:relative;
- 	right:26px;
+ 	right:19px;
+ 	font-size:15px;
+ 	top:39px;
  }
 
 .icones_test{					/* icones oeil */
@@ -863,8 +938,8 @@ span{							/* couleur titre span  */
 .titre_projet_2{				/* style de la div animee */
 
 	width:100%;
-	height:100px;
-	background-color:rgba(0, 0, 0, 0.7);
+	height:65px;
+	background-color:rgba(0, 0, 0, 0.5);
 	padding-top:10px;
 	padding-left:10px;
 	line-height:25px;
@@ -872,13 +947,13 @@ span{							/* couleur titre span  */
 
 .span_titre{					/* titre de la div animee */
 
-	font-size:25px;
+	font-size:20px;
 	color:pink;
 }
 
 .span_paragraphe{				/* p de la div animee */
 
-	font-size:17px;
+	font-size:15px;
 	color:white;
 }
 
@@ -918,7 +993,7 @@ span{							/* couleur titre span  */
 	z-index:0;
 }
 
-#container_formulaire_1{		/* la div qui contient le formulaire et qui est positionnee par-dessus la carte */
+#container_formulaire_1 {		/* la div qui contient le formulaire et qui est positionnee par-dessus la carte */
 
 	height:0px;
 	display:block;
@@ -927,29 +1002,42 @@ span{							/* couleur titre span  */
 	top:0%;
 }
 
-#formulaire{					/* style du formulaire */
+#formulaire {					/* style du formulaire */
 
 	margin-left:62%;
-	width:400px;
+	width:370px;
 	margin-top:30px;
-	padding-bottom:50px;
-	border:1px solid grey;
-	background-color:rgba(208, 208, 208, 0.9);
-	border-radius:7px;
+	border:0px;
+	background-color:rgba(241, 246, 248, 0.7);
 	z-index:10;
+	padding:20px 25px 0px 25px;
 }
 
 #address, form input:first-child{
 
 	margin-top:30px;
 	line-height:8px;
-	margin-left:20px;
-	margin-right:20px;
 }
 
 #address {
 
 	margin-top:10px;
+	
+}
+
+form input:first-child,
+input[type=text], 
+input[type=email],
+textarea {
+
+	border:1px solid #D2D2D2 !important;
+	border-radius:5px !important;
+	padding-left:15px;
+}
+
+textarea {
+
+	padding-top:10px;
 }
 
 #formulaire h5 {
@@ -959,8 +1047,13 @@ span{							/* couleur titre span  */
 	font-style:normal;
 	color:black;
 	margin-bottom:15px;
-	margin-top:20px;
-	margin-left:20px;
+	margin-top:5px;
+	font-family:"Arial", sans-serif;
+}
+
+#address strong {
+
+	color:#6C7074;
 }
 
 #address p:last-child{
@@ -983,8 +1076,8 @@ input[type=email]{
 input, textarea{				
 
 	border-radius:3px;
-	margin-left:20px;
-	margin-right:20px;
+	/*margin-left:20px;
+	margin-right:20px;*/
 	margin-bottom:20px;
 }
 
@@ -1001,13 +1094,12 @@ textarea{
 input[type=submit]{	
 
 	cursor:pointer;
-	background-color:#70ABCF;
+	background-color:#5CADD3;
 	border:0px;
-	border-bottom:3px solid #488CB4;
-	width:150px;
+	border-bottom:3px solid #478CAD;
+	width:135px;
 	height:40px;
 	font-size:17px;
-	border-radius:7px;
 	color:white;
 }							
 							/* la div contenant le message envoye par ajax */

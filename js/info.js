@@ -12,7 +12,7 @@ $(function(){
 													 // ce qui donne l'illusion qu'elle remonte
 
 			var id_projet = this.id; 
-			$('#titre_projet_' + id_projet).css({'transition':'0.2s', 'top':'-150px'});
+			$('#titre_projet_' + id_projet).css({'transition':'0.2s', 'top':'-120px'});
 		});
 
 		$('.div_transparente').on('mouseout', function(){// lorsque la souris cesse de survoler la div, la taille de la div diminue de 170px et sa position top augmente d'autant
@@ -25,7 +25,7 @@ $(function(){
 	} 
 	else {
 
-		$('.titre_projet').css({'top':'-150px'});
+		$('.titre_projet').css({'top':'-120px'});
 
 		$('.div_transparente').off();
 		$('.titre_projet').off();
@@ -48,7 +48,7 @@ $(function(){
 														 // ce qui donne l'illusion qu'elle remonte
 
 				var id_projet = this.id; 
-				$('#titre_projet_' + id_projet).css({'transition':'0.2s', 'top':'-150px'});
+				$('#titre_projet_' + id_projet).css({'transition':'0.2s', 'top':'-120px'});
 			});
 
 			$('.div_transparente').on('mouseout', function(){// lorsque la souris cesse de survoler la div, la taille de la div diminue de 170px et sa position top augmente d'autant
@@ -61,7 +61,7 @@ $(function(){
 		} 
 		else {
 
-			$('.titre_projet').css({'top':'-150px'});
+			$('.titre_projet').css({'top':'-120px'});
 
 			$('.div_transparente').off();
 			$('.titre_projet').off();

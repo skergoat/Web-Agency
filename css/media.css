@@ -31,8 +31,8 @@
 
 		position:relative;
 		height:100%;
-		background-color:#d0d0d0;
-		border-top: 1px solid grey;
+		background-color:#EDF4F8;
+		/*border-top: 1px solid rgba(241, 246, 248, 0.7);*/
 	}
 	
 	#formulaire {						/* centrement du formulaire */
@@ -48,9 +48,31 @@
 		border-bottom:0px solid grey;
 	}
 
+	#formulaire h5 {
+
+		text-align:center;
+	}
+
 	h4, strong, #address{				/* centremnent du titre du formulaire */
 
 		text-align:center;
+	}
+
+	#section_carte {
+
+		display:flex;
+		flex-direction:column-reverse;
+	}
+
+	#carte {
+
+		height:400px;
+	}
+
+	form {
+
+		width: 500px;
+    	margin: auto;
 	}
 }
 
@@ -74,6 +96,12 @@
 	#container_container_slogan {
 
 		padding-top:7%;
+	}
+
+	.container-slogan {
+		width:400px;
+		left:100px;
+		top:30%;
 	}
 
 	#container_slogan_slogan {
@@ -182,11 +210,6 @@
 		padding-left:20px;
 	}
 
-	/*#container_slogan p{		 disparition du p du header 
-
-		display:none;
-	}*/
-
 	#container_slogan h3{		/* ajustement du h3 du header */
 
 		text-align:left;
@@ -202,6 +225,7 @@
 	.style_text{					/* style du conteneur des textes des "services" */
 
 		margin-left:0px;
+		padding-top:0px;
 	}
 
 	.description {
@@ -253,7 +277,7 @@
 	.cercle_bleu_tierce{
 
 	 	top:-20px;
-	 	right:-43px;
+	 	right:-53px;
 	}
 
 	.flex div p {				/* p des "services" */
@@ -310,12 +334,13 @@
 		padding-top:5%;
 	}
 
+	.container-slogan{ 
 
-	/*.style_text{					 style du conteneur des textes des "services" 
+		left:50px;
+		top:20%;
 
-		margin-left:20px;
-		margin-right:20px;
-	}*/
+	}
+
 }
 
 /***************************************************** 737 px *******************************************************/
@@ -328,45 +353,57 @@
 		display:none;
 	}
 
-	#en_tete_1, #en_tete_2 {
+	#responsive_1 {
 
+		position: relative;
+	    top: 0px;
+	    z-index: 20;
+	}
+
+	#responsive_2 {
+
+		position: absolute;
+	    z-index: 10;
+	    width: 100vw;
+	    left: 0px;
+	}
+	
+	.mobile {
+
+		display:block;
+		display:block;
 		width: 100%;
-	    position: relative;
 	    top: 0px;
 	    height: 100vh;
-	    /* width: 160vw; */
 	    object-fit: cover;
 	}
 
-	#container_container_slogan {
+	.desktop {
 
-		padding-top:0px;
+		display:none;
 	}
 
-	#container_container_slogan_1 {
+	.container-slogan {
 
-		height:100vh;
-		position:relative;
-	}
-
-	#container_container_slogan_2 {
-
-		position:absolute;
-		bottom:0px;
 		width:100%;
-		background:rgba(255, 255, 255, 0.5);
-	}
-
-	#container_slogan {
-
-		padding:0px;
-		margin:auto;
-		padding-bottom:20px;
+		padding-top:25px;
+		padding-bottom:30px;
+		top:auto;
+		left:0px;
+		bottom:0px;
+		background:rgba(255, 255, 255, 0.7);
 	}
 
 	#container_slogan_slogan {
 
 		width:100%;
+	}
+
+	#container_slogan_slogan p,
+	#container_slogan_slogan h1 {
+
+		width:100%;
+		text-align:center;
 	}
 
 	#container_slogan_slogan p, #container_slogan_slogan h1 {
@@ -377,6 +414,12 @@
 	#plus_dinfo {
 
 		margin:auto;
+	}
+
+	form {
+
+		width: 90%;
+    	margin: auto;
 	}
 
 }
@@ -410,11 +453,6 @@
 		width:100%;
 	}
 
-	/*.style_text{					 style du conteneur des textes des "services" 
-
-		margin-left:20px;
-	}*/
-
 	#container_bouton_2, #container_bouton_1{
 
 		display:none;
@@ -447,11 +485,6 @@
 	#div_fleche_bleue{	
 
 		width:380px;
-	}
-
-	#formulaire {						/* centrement du formulaire */
-
-		width:100%;
 	}
 }
 

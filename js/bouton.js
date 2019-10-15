@@ -24,15 +24,15 @@ $(function(){ // script qui declenche l'apparition des boutons et l'animation du
 												// si la fenetre est < 500px et que l'image 1 est visible, alors elle disparait 
 												// sinon elle apparait 
 
-		if($('#en_tete_1').css("opacity") == 1 && largeur_fenetre <= 700)
+		if($('#responsive_1').css("opacity") == 1 && largeur_fenetre <= 700)
 		{
-			$('#en_tete_1').animate({opacity: '0'}, 4000); 
-			$('#en_tete_2').animate({'opacity':'1'}, 4000);
+			$('#responsive_1').animate({opacity: '0'}, 4000); 
+			$('#responsive_2').animate({'opacity':'1'}, 4000);
 		}
-		if($('#en_tete_1').css("opacity") == 0 && largeur_fenetre <= 700)
+		if($('#responsive_1').css("opacity") == 0 && largeur_fenetre <= 700)
 		{
-			$('#en_tete_1').animate({opacity: '1'}, 4000); 
-			$('#en_tete_2').animate({'opacity':'0'}, 4000);
+			$('#responsive_1').animate({opacity: '1'}, 4000); 
+			$('#responsive_2').animate({'opacity':'0'}, 4000);
 		}
 	};
 
