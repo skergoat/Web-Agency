@@ -26,13 +26,17 @@
 
 @media screen and (max-width: 1106px)
 {
+	#container_formulaire_1,
+	#formulaire {
+
+		background-color:white;
+	}
+
 
 	#container_formulaire_1{		/* positionnement du formulaire sous la carte */
 
 		position:relative;
 		height:100%;
-		background-color:#EDF4F8;
-		/*border-top: 1px solid rgba(241, 246, 248, 0.7);*/
 	}
 	
 	#formulaire {						/* centrement du formulaire */
@@ -42,7 +46,7 @@
 		display:block;
 		margin:auto;
 		margin-top:0px;
-		padding-bottom:50px;
+		/*padding-bottom:50px;*/
 		border-radius:0px;
 		border:0px;
 		border-bottom:0px solid grey;
@@ -222,10 +226,15 @@
 		flex-direction:column;
 	}
 
-	.style_text{					/* style du conteneur des textes des "services" */
+	.ordi img {
 
-		margin-left:0px;
-		padding-top:0px;
+	    position: relative;
+	    left: 0px;
+	}
+
+	.style_text {
+
+		padding-left:0px;
 	}
 
 	.description {

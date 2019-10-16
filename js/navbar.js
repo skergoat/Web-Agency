@@ -14,31 +14,65 @@ $(function(){
 		}
 	});
 
-	// navbar fixed
+	// navbar box shadow
 
-	var offset = $("nav").offset().top; // position top de la navbar 
+	var offset = $("nav").offset().top; 
+	// var size = $(window).width();
 
-	$(document).scroll(function(){ // au scroll... 
+	if(offset > 1){ 
 
-	    var scrollTop = $(document).scrollTop(); // variable qui contient la position du scroll  
-	    if(scrollTop > offset + 100){ // si le scroll est au-dessus de la position de la navbar + 100px
-	        $("nav").attr('class', 'navbar_animation').css('border-bottom', '1px solid grey').css('box-shadow', '0px 0px 8px 2px grey');
-	    }
+        $("nav").css('border-bottom', '1px solid grey').css('box-shadow', '0px 0px 8px 2px grey');
+        $("nav").addClass('navbar_animation');
+    }
+    else {
 
-	    else{
+    	$("nav").css('border-bottom', '1px solid transparent').css('box-shadow', '0px 0px 8px 2px transparent');
+    	$("nav").removeClass('navbar_animation');
+    }
 
-	    	 $("nav").removeClass('navbar_animation'); //autrement la navbar reste a sa place 
-	    }
+    // navbar scroll  
 
-	    if($('#icon1').hasClass('open')){ // si la navbar est ouverte au scroll, alors elle se referme 
+	$(document).on('scroll', function(){ 
+
+		// animation css 
+
+	   	var scroll = $(this).scrollTop();
+	   	// var size = $(this).width();
+
+		if(scroll > 10) {
+
+			$("nav").addClass('navbar_animation').css('border-bottom', '1px solid grey').css('box-shadow', '0px 0px 8px 2px grey');
+
+		}
+		else if(scroll >= 0 && scroll <= 10) {
+
+			$("nav").removeClass('navbar_animation').css('border-bottom', '1px solid transparent').css('box-shadow', '0px 0px 8px 2px transparent');
+		}
+
+		// fermeture de la nav responsive 
+
+		if($('#icon1').hasClass('open')) { 
 
 	   		$('#nav_responsive').animate({'top':'-=275px'});
 			$('#container_nav_responsive').animate({'height':'-=320px'});
 			$('#icon1').toggleClass();
-
 	   	}
+	   
+	}); 
+
+	$(window).resize(function() {
+
+		if($('#icon1').hasClass('open')){ // si la navbar est fermee 
+
+			$('#icon1').toggleClass('open');
+			$('#nav_responsive').animate({'top':'-=275px'}, 500);
+			$('#container_nav_responsive').animate({'height':'-=320px'}, 500);
+		}
 
 	});
+
+	
+	// ouverture et fermeture de la nav responsive 
 
 	$('#icon1').click(function(){ // si on clique sur le hamburger 
 
@@ -47,7 +81,6 @@ $(function(){
 				$('#nav_responsive').animate({'top': '+=275px'}, 500);
 				$('#container_nav_responsive').animate({'height':'+=320px'}, 500);
 			
-
 			$(this).toggleClass('open'); // on change la classe du "hanburger" pour pouvoir refermer la liste des items  
 		}
 		else{ // si la navbar est ouverte 
