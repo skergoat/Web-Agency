@@ -1,6 +1,6 @@
 $(function(){
 
-	// border-top 
+	// border-top de la navbar  
 
 	$('#liste1 li a:first').addClass('active');
 
@@ -14,10 +14,8 @@ $(function(){
 		}
 	});
 
-	// navbar box shadow
-
+	// box-shadow au chargement de la page 
 	var offset = $("nav").offset().top; 
-	// var size = $(window).width();
 
 	if(offset > 1){ 
 
@@ -30,14 +28,10 @@ $(function(){
     	$("nav").removeClass('navbar_animation');
     }
 
-    // navbar scroll  
-
+    // animation et box-shadow de la navbar au scroll 
 	$(document).on('scroll', function(){ 
 
-		// animation css 
-
 	   	var scroll = $(this).scrollTop();
-	   	// var size = $(this).width();
 
 		if(scroll > 10) {
 
@@ -49,8 +43,6 @@ $(function(){
 			$("nav").removeClass('navbar_animation').css('border-bottom', '1px solid transparent').css('box-shadow', '0px 0px 8px 2px transparent');
 		}
 
-		// fermeture de la nav responsive 
-
 		if($('#icon1').hasClass('open')) { 
 
 	   		$('#nav_responsive').animate({'top':'-=275px'});
@@ -60,9 +52,10 @@ $(function(){
 	   
 	}); 
 
+	// fermeture du menu deroulant au scroll 
 	$(window).resize(function() {
 
-		if($('#icon1').hasClass('open')){ // si la navbar est fermee 
+		if($('#icon1').hasClass('open')){ 
 
 			$('#icon1').toggleClass('open');
 			$('#nav_responsive').animate({'top':'-=275px'}, 500);

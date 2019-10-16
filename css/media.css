@@ -15,10 +15,6 @@
 		padding-left:0px;
 	}
 
-	/*#container_slogan_slogan {
-
-		padding-left:0px;
-	}*/
 }
 
 /***************************************************** 1106 px *******************************************************/
@@ -46,7 +42,6 @@
 		display:block;
 		margin:auto;
 		margin-top:0px;
-		/*padding-bottom:50px;*/
 		border-radius:0px;
 		border:0px;
 		border-bottom:0px solid grey;
@@ -296,11 +291,6 @@
 		margin-left:100px;
 	}
 
-	/*.style_text{					 style du conteneur des textes des "services" 
-
-		margin-left:20px;
-		margin-right:20px;
-	}*/
 }
 
 /***************************************************** 863 px *******************************************************/
@@ -514,19 +504,6 @@
 
 		font-size:30px;
 	}
-
-	
-	/*#en_tete_2 {					
-		
-		max-width:100%;
-		height:auto;
-	}
-
-	#en_tete_1 {
-
-		max-height:100%;
-		height:auto;
-	}*/
 
 	#icon1{					/* position du "hamburger" */
 
