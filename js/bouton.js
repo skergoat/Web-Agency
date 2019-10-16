@@ -1,41 +1,56 @@
-$(function(){ // script qui declenche l'apparition des boutons et l'animation du slider 
+// diaporama du header 
 
+$(function(){ 
+
+	// 2nd image du diaporama que l'on cache au chargement de la page 
 	$('#en_tete_2').animate({'opacity':'0'}, 1000);
+	// ajouter la classe "start" qui servira a alterner les 2 images du diaporama 
+	$('#responsive_1, #en_tete_1').addClass('start');
 
-	// le slider 
+	// lancez la barre de chargement 
+	$('.chargement_barre').animate({'width':'100%'}, 10000);
+	$('.chargement_barre').animate({'width':'0px'}, 0); 
 
-	$('.bouton').click(function(){ // au click, si l'image 1 est visible, elle disparait. Autrement elle apparait
+	
+	function startInterval(){ // fonction qui fait defilement le diaporama et grandir la barre de chargement 
 
-		if($('#en_tete_1').css('opacity') == "1"){
+		$('.chargement_barre').animate({'width':'100%'}, 10000);
+		$('.chargement_barre').animate({'width':'0px'}, 0); 
 
-			$('#en_tete_1').animate({'opacity':'0'}, 1000);
-			$('#en_tete_2').animate({'opacity':'1'}, 1000);
+		if($('#responsive_1, #en_tete_1').hasClass('start')) {
+
+			$('#responsive_1, #en_tete_1').animate({opacity: '0'}, 1000); 
+			$('#responsive_2, #en_tete_2').animate({'opacity':'1'}, 1000);
 		}
-		else{
-			$('#en_tete_1').animate({'opacity':'1'}, 1000);
-			$('#en_tete_2').animate({'opacity':'0'}, 1000);
-		}
-	});
+		else {
 
-	function bis(){	// en-dessous de 500px les boutons disparaissent 
-					// La succession des images du header devient donc automatique  
-
-		var largeur_fenetre = $(window).width(); // largeur de la fenetre 
-												// si la fenetre est < 500px et que l'image 1 est visible, alors elle disparait 
-												// sinon elle apparait 
-
-		if($('#responsive_1').css("opacity") == 1 && largeur_fenetre <= 700)
-		{
-			$('#responsive_1').animate({opacity: '0'}, 4000); 
-			$('#responsive_2').animate({'opacity':'1'}, 4000);
+			$('#responsive_1, #en_tete_1').animate({opacity: '1'}, 1000); 
+			$('#responsive_2, #en_tete_2').animate({'opacity':'0'}, 1000);
 		}
-		if($('#responsive_1').css("opacity") == 0 && largeur_fenetre <= 700)
-		{
-			$('#responsive_1').animate({opacity: '1'}, 4000); 
-			$('#responsive_2').animate({'opacity':'0'}, 4000);
-		}
+
+		$('#responsive_1, #en_tete_1').toggleClass('start');
+		$('#responsive_2, #en_tete_2').toggleClass('start');
+
+		return false;
+
 	};
 
-	var interval = setInterval(bis, 10000); // la fonction setInterval permet de lancer l'animation a l'infini 
-	
+	// alternance des inages du diaporama au click 
+	$('.bouton').click(function(e){ 
+
+		e.preventDefault();
+		$(this).prop('disabled', true);
+
+		startInterval();
+
+		setTimeout(function() {
+
+			$('.bouton').prop('disabled', false);
+
+		}, 1000);
+
+	});
+
+	var interval = setInterval(startInterval, 10000); // la fonction setInterval permet de lancer l'animation a l'infini
+
 }); 

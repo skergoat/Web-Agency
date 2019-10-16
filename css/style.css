@@ -67,8 +67,8 @@
 
 .mobile {
 
-		display:none;
-	}
+	display:none;
+}
 
 
 h1, h2, h3, strong, .span_titre, .span_paragraphe { 	/* fonts de la page */
@@ -409,35 +409,7 @@ header {
 	color:white;				/* style du texte */
 }
 
-/*#container_container_slogan{	
-
-	display:flex;
-	justify-content:space-between;
-	position:absolute;
-	z-index: 100;
-	width:100%;
-	padding-top:10%;
-}*/
-
-/*#container_container_slogan_1{		
-
-	width:100%;
-	display:flex;
-}
-
-#container_container_slogan_2{	/	
-
-	display:flex;
-}*/
-
 #container_bouton_1{			
-
-	margin:auto;
-	margin-right:0px;
-	margin-left:0px;
-}
-
-#bouton1{						/* fleche et bouton */
 
 	border-top-left-radius:0px;
 	border-bottom-left-radius:0px;
@@ -446,19 +418,14 @@ header {
 	text-align:center;
 }
 
-/*.fa-angle-left:before {
+#container_bouton_2{			
 
-	display:block;
-	margin:auto;
-	margin-right:10px;
+	border-top-left-radius:50px;
+	border-bottom-left-radius:50px;
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+	text-align:center;
 }
-
-.fa-angle-right:before {
-
-	display:block;
-	margin:auto;
-	margin-left:10px;
-}*/
 
 .container-boutons {
 
@@ -471,39 +438,22 @@ header {
 	justify-content:space-between;
 }
 
-#container_bouton_2{			/* div contenant le bouton de droite */	
-
-	margin:auto;
-	margin-right:0px;
-}
-
 .bouton {						/* creation des boutons du slider */
 
-	/*width:40px;*/
 	border-top-left-radius:70px;
 	border-bottom-left-radius:70px;
-	text-align:center;
-	cursor:pointer;
-	padding-top:25px;
-	padding-bottom:25px;
-	/*font-size:40px;*/
+	padding:0px;
+	border:0px;
 	background-color:rgba(0, 0, 0, 0.3);
-	/*color:white;*/
-	padding-left:3px;
+	cursor:pointer;
+	height:65px;
+
 }
 
 .bouton:active {					/* changement du bouton au moment du click  */
 	background-color:rgba(0, 0, 0, 0.5);	
 }
-		
-/*#container_slogan{			
 
-	text-align:left;
-	font-size:200%;
-	position:relative;
-	z-index:2;
-}
-*/
 .container-slogan { 	/* conteneur ou l'on va positionner le slogan */
 
 	height:auto;
@@ -514,13 +464,22 @@ header {
 	z-index:200;
 }
 
-/*#container_slogan_slogan{		 ajustement du slogan dans son conteneur 		
+.chargement {
 
-	width:540px;
-	margin-right:100px;
-	padding-left:100px;
+	height:5px;
+	width:100%;
+	background-color:rgba(0, 0, 0, 0.3);
+	position:absolute;
+	bottom:3px;
+	z-index:10000;
+}
 
-}*/
+.chargement_barre {
+
+	background:#5CADD3;
+	width:0px;
+	height:5px;
+}
 
 #container_slogan_slogan h3{	/* position du slogan-titre */
 
